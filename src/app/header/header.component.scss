@@ -104,7 +104,7 @@
     cursor: pointer;
   }
   
-  @media (max-width: 778px) {
+  @media (max-width: 780px) {
     .navbar-menu {
       position: fixed;
       top: 0;
@@ -146,4 +146,11 @@
     .navbar-close {
       display: block;
     }
+    .header{
+      padding: 0px;
+    }
+    .navbar{
+      margin-bottom: 20px;
+    }
+    
   }

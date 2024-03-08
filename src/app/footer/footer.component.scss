@@ -76,11 +76,21 @@
     gap: 10px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    
   }
 
   .footer-left,
   .footer-right {
     margin: 10px 0;
+  }
+  .footer-left{
+    p{
+      font-size: 13px;
+    }
+  }
+  .footer-right{
+    .navbar-item{
+      font-size: 13px;
+    }
   }
 }
