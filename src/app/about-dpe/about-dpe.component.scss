@@ -1,0 +1,29 @@
+.image-container {
+    position: relative;
+    width: 100%; /* or set a specific width */
+    height: auto; /* or set a specific height */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white; /* Choose text color that contrasts with your image */
+    font-size: 20px; /* Adjust size as needed */
+    /* Optionally add more styling here to customize the appearance */
+  }
+  p{
+    width: 75%;
+    line-height: 35px;
+  }

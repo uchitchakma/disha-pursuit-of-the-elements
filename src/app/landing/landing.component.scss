@@ -5,13 +5,17 @@
         justify-content: center;
         background-color: #F2EDE1;
         border-radius: 20px;
-    
     }
     .head{
         font-size: 36px;
         padding: 0px 20px;
     }
 
+}
+@media (max-width: 1400px) {
+    .head{
+        padding: 0px;
+    }
 }
 
 @media (max-width: 1200px) {

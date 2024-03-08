@@ -37,7 +37,7 @@
       
   
       img {
-        width: 350px;
+        width: 100%;
       }
     }
   }
@@ -153,4 +153,13 @@
       margin-bottom: 20px;
     }
     
+  }
+
+  @media (max-width: 1400px) {
+    .header{
+      padding: 0px;
+    }
+    .navbar{
+      margin: 0px;
+    }
   }
