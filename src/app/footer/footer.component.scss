@@ -1,0 +1,86 @@
+.footer {
+  padding: 15px 0;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+.align-f {
+  width: 78%;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.footer-left {
+  font-size: 16px;
+  color: #303031;
+}
+
+.footer-right {
+  cursor: pointer;
+  .navbar-item {
+    color: #303031;
+    position: relative;
+    display: inline-block; /* Change to inline-block for alignment */
+    padding: 10px 15px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+    padding-right: 10px;
+  }
+  .navbar-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: #259cb1; /* Color of the underline */
+    transition: width 0.4s ease; /* Animation speed and easing */
+  }
+  .navbar-item:hover::after {
+    width: 100%; /* Full width on hover */
+  }
+  .navbar-toggler:hover {
+    position: relative;
+    display: inline-block; /* Change to inline-block for alignment */
+    padding: 10px 15px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Text color */
+    transition: color 0.3s ease;
+    color: #259cb1; /* Highlight color on hover for consistency */
+  }
+  /* no specific width, allowing it to take only as much space as it needs */
+}
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: 10px 0;
+  }
+}
