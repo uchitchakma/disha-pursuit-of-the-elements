@@ -1,82 +1,3 @@
-.landing {
-  height: 100%;
-  width: 100%;
-}
-.carousel {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 65vh;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; /* For Internet Explorer 10+ */
-  scrollbar-width: none; /* For Firefox */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* For Webkit browsers */
-}
-.content {
-  max-width: 1300px !important;
-  background-color: #f2ede1;
-  height: 54vh;
-  width: 75%;
-  margin: auto;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.slide {
-  flex: 0 0 100%; // Ensure slides are full width but not more
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  overflow: hidden;
-  height: 500px;
-}
-.carousel {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  overflow-x: auto; /* Explicitly allow horizontal scrolling */
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth; /* Optional: for smoother scrolling */
-}
-
-.slide {
-  flex: 0 0 auto; /* Change based on your layout needs */
-  width: 20%; /* Example width, adjust as needed */
-  scroll-snap-align: start;
-  overflow: hidden;
-  height: 100%;
-  min-width: 100vw;
-}
-
-.carousel-indicators {
-  text-align: center;
-  position: relative;
-  bottom: 50px;
-}
-
-.indicator {
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.6s ease;
-}
-
-.indicator.active {
-  background-color: #666; /* Highlight the active indicator */
-}
-
 .slide1 {
   .head {
     font-size: 36px;
@@ -88,9 +9,26 @@
 
 .slide2,
 .slide3 {
+  &.ng-enter,
+  &.ng-leave {
+    display: block;
+    transition: opacity 800ms ease-in-out;
+  }
+
+  &.ng-enter-active,
+  &.ng-leave-active {
+    opacity: 1;
+  }
+
+  &.ng-enter {
+    opacity: 0;
+  }
+
+  &.ng-leave-active {
+    opacity: 0;
+  }
   .content {
     position: relative;
-    width: 100%; /* or set a specific width */
     height: auto; /* or set a specific height */
   }
 
@@ -108,24 +46,46 @@
     height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between; // changed from space-around for consistent alignment
     align-items: center;
     color: white; /* Choose text color that contrasts with your image */
     font-size: 20px; /* Adjust size as needed */
     /* Optionally add more styling here to customize the appearance */
+    padding: 2em; // Added padding for aesthetics
+    box-sizing: border-box; // Ensures padding does not affect width
+
+    // Add a background overlay if needed for better text readability
+  }
+  h1 {
+    position: relative;
+    top: 20%;
   }
   p {
     width: 75%;
     line-height: 35px;
   }
 }
+.slide2 {
+  cursor: pointer;
+  .sec2 {
+    display: flex;
+    align-items: center;
+    margin: 50px 0px;
+    .left,
+    .right {
+      width: 50%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .slide3 {
   p {
     line-height: 60px;
   }
-  .text-overlay {
-    top: 8%;
-  }
+
   .text {
     display: flex;
     width: 100%;
@@ -173,7 +133,7 @@
   }
 }
 
-.slide4 {
+.slide6 {
   .body {
     display: flex;
     flex-direction: row;
@@ -193,9 +153,60 @@
   }
   .right {
     width: 60%;
-    p{
-        font-size: 20px;
-        width: 75%;
+    p {
+      font-size: 20px;
+      width: 75%;
+    }
+  }
+}
+.slide7 {
+  .body {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    position: relative;
+    bottom: 10%;
+    align-items: center;
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .right {
+    width: 50%;
+    /* landing.component.scss */
+
+    .info-toggle {
+      cursor: pointer; /* Makes it clear the plus symbol is clickable */
+      margin-left: 5px; /* Adjust as needed */
+    }
+
+    .info-wrapper {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease-out; /* Smooth transition for the height */
+    }
+
+    .info-content {
+      padding: 10px;
+      /* Add other styles for your info content here */
+    }
+
+    /* This style will apply when the additional info is shown */
+    .info-wrapper.show {
+      height: auto; /* Adjust to the natural height of the content */
+    }
+
+    p {
+      font-size: 20px;
+      width: 100%;
+      padding: 10px 0px;
     }
   }
 }
@@ -205,6 +216,9 @@
     img {
       width: 550px;
     }
+  }
+  .content {
+    width: 90%;
   }
 }
 
