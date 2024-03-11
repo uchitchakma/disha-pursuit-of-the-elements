@@ -22,6 +22,7 @@ import { HomeSlide4Component } from '../home-slide-4/home-slide-4.component';
 import { HomeSlide5Component } from '../home-slide-5/home-slide-5.component';
 import { HomeSlide6Component } from '../home-slide-6/home-slide-6.component';
 import { HomeSlide7Component } from '../home-slide-7/home-slide-7.component';
+import { HomeSlide8Component } from '../home-slide-8/home-slide-8.component';
 
 @Component({
   selector: 'app-landing',
@@ -34,6 +35,7 @@ import { HomeSlide7Component } from '../home-slide-7/home-slide-7.component';
     HomeSlide5Component,
     HomeSlide6Component,
     HomeSlide7Component,
+    HomeSlide8Component,
     RouterModule,
     CommonModule,
     ScrollHorizontalDirective,

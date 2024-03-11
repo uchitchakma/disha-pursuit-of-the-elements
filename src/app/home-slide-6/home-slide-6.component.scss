@@ -22,4 +22,29 @@
       width: 75%;
     }
 }
-  
+
+@media (max-width: 1030px) {
+  .body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .left, .right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+@media (max-width: 780px) {
+  .left{
+  img{
+    width: 135px;
+  }
+}
+.right{
+  p{
+    font-size: 18px;
+    width: 100%;
+  }
+}}
