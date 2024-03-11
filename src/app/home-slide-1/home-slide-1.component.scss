@@ -1,0 +1,60 @@
+
+ img{
+  width: 500px;
+  padding: 25px;
+ } 
+ .align {
+  width: 90%;
+}
+.head {
+  font-size: 36px;
+  padding: 25px;
+  text-align: center;
+}
+.carousel-indicators {
+  bottom: 35px;
+}
+ .content{
+  gap: 22px;
+ } 
+  
+@media (max-width: 1200px) {
+
+    img {
+      width: 550px;
+    }
+  }
+  .content {
+    width: 90%;
+  }
+
+
+@media (max-width: 780px) {
+  .content {
+    width: 90%;
+    
+  }
+  .head{
+    font-size: 30px;
+  }
+  
+    img {
+      width: 350px ;
+      
+    }
+  }
+  
+ 
+
+@media (max-width: 480px) {
+  .head{
+    font-size: 24px;
+  }
+  img{
+    width: 75%;
+  }.content{
+    gap: 0;
+  }
+}
+
+

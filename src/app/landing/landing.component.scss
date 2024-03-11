@@ -1,215 +1,47 @@
-.slide1 {
-  .head {
-    font-size: 36px;
-  }
-  img {
-    width: 600px;
-  }
+.slide {
+  width: 20%; /* Example width, adjust as needed */
+  scroll-snap-align: start;
+
+  height: calc(100vh - 270px);
+  min-width: 100vw;
+  flex: 0 0 100%; // Ensure slides are full width but not more
+ 
+  scroll-snap-stop: always;
+  overflow: hidden;
+  
+}
+.carousel {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  overflow-x: auto; /* Explicitly allow horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Optional: for smoother scrolling */
 }
 
-.slide2,
-.slide3 {
-  &.ng-enter,
-  &.ng-leave {
-    display: block;
-    transition: opacity 800ms ease-in-out;
-  }
 
-  &.ng-enter-active,
-  &.ng-leave-active {
-    opacity: 1;
-  }
 
-  &.ng-enter {
-    opacity: 0;
-  }
-
-  &.ng-leave-active {
-    opacity: 0;
-  }
-  .content {
-    position: relative;
-    height: auto; /* or set a specific height */
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-  }
-
-  .text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; // changed from space-around for consistent alignment
-    align-items: center;
-    color: white; /* Choose text color that contrasts with your image */
-    font-size: 20px; /* Adjust size as needed */
-    /* Optionally add more styling here to customize the appearance */
-    padding: 2em; // Added padding for aesthetics
-    box-sizing: border-box; // Ensures padding does not affect width
-
-    // Add a background overlay if needed for better text readability
-  }
-  h1 {
-    position: relative;
-    top: 20%;
-  }
-  p {
-    width: 75%;
-    line-height: 35px;
-  }
+.carousel-indicators {
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+  z-index: 10;
 }
-.slide2 {
+
+.indicator {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
   cursor: pointer;
-  .sec2 {
-    display: flex;
-    align-items: center;
-    margin: 50px 0px;
-    .left,
-    .right {
-      width: 50%;
-    }
-    img {
-      width: 100%;
-    }
-  }
+  transition: background-color 0.6s ease;
 }
+// .indicator.active {
+//   background-color: #1f1c1c; /* Change to a color that stands out */
+// }
 
-.slide3 {
-  p {
-    line-height: 60px;
-  }
-
-  .text {
-    display: flex;
-    width: 100%;
-    .left,
-    .right {
-      width: 50%;
-    }
-  }
-  img {
-    filter: brightness(50%);
-  }
-  .left {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .top,
-    .btm {
-      display: flex;
-      flex-direction: row;
-      margin: 20px;
-    }
-    .top {
-      gap: 35px;
-    }
-    .sec {
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      .num {
-        font-size: 64px;
-      }
-      .txt {
-        font-size: 24px;
-      }
-    }
-  }
-  .right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    p {
-      font-size: 24px;
-    }
-  }
-}
-
-.slide6 {
-  .body {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    position: relative;
-    bottom: 10%;
-    align-items: center;
-  }
-  .content {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .left {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-  }
-  .right {
-    width: 60%;
-    p {
-      font-size: 20px;
-      width: 75%;
-    }
-  }
-}
-.slide7 {
-  .body {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    position: relative;
-    bottom: 10%;
-    align-items: center;
-    width: 100%;
-  }
-  .content {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .left {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-  .right {
-    width: 50%;
-    /* landing.component.scss */
-
-    .info-toggle {
-      cursor: pointer; /* Makes it clear the plus symbol is clickable */
-      margin-left: 5px; /* Adjust as needed */
-    }
-
-    .info-wrapper {
-      height: 0;
-      overflow: hidden;
-      transition: height 0.5s ease-out; /* Smooth transition for the height */
-    }
-
-    .info-content {
-      padding: 10px;
-      /* Add other styles for your info content here */
-    }
-
-    /* This style will apply when the additional info is shown */
-    .info-wrapper.show {
-      height: auto; /* Adjust to the natural height of the content */
-    }
-
-    p {
-      font-size: 20px;
-      width: 100%;
-      padding: 10px 0px;
-    }
-  }
-}
 
 @media (max-width: 1200px) {
   .slide1 {
@@ -245,3 +77,10 @@
     bottom: 35px;
   }
 }
+
+@media (max-width: 480px) {
+.slide{
+  height: calc(100vh - 250px);
+}
+}
+

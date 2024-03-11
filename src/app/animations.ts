@@ -1,21 +1,22 @@
 // animations.ts
 import {
-    trigger,
-    transition,
-    style,
-    animate,
-  } from '@angular/animations';
-  
-  export const fadeInAnimation = trigger('fadeInAnimation', [
-    transition(':enter', [ // :enter is alias for 'void => *'
-      style({ opacity: 0 }),
-      animate('600ms ease-in', style({ opacity: 1 })),
-    ]),
-  ]);
+  trigger,
+  transition,
+  style,
+  animate,
+} from '@angular/animations';
+
+export const fadeInAnimation = trigger('fadeInAnimation', [
+  transition(':enter', [ // :enter is alias for 'void => *'
+    style({ opacity: 0 }),
+    animate('1s ease-in-out', style({ opacity: 1 })),
+  ]),
+]);
+
   
   export const fadeOutAnimation = trigger('fadeOutAnimation', [
     transition(':leave', [ // :leave is alias for '* => void'
-      animate('600ms ease-out', style({ opacity: 0 })),
+      animate('1000ms ease-out', style({ opacity: 0 })),
     ]),
   ]);
   

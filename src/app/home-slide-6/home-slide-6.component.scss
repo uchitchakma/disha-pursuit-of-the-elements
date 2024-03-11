@@ -1,0 +1,25 @@
+.body {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    position: relative;
+    bottom: 10%;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .right {
+    width: 60%;
+    p {
+      font-size: 20px;
+      width: 75%;
+    }
+}
+  

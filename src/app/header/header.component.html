@@ -1,39 +1,39 @@
 <div class="header">
-    <div class="align1">
-      <nav class="navbar">
-        <div class="navbar-brand">
-          <a class="logo" href="/">
-            <img src="../../assets/images/header.svg" alt="">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <div class="navbar-menu" [class.is-active]="navbarOpen">
-          <div class="navbar-end">
-            <a
-              class="navbar-item"
-              routerLink="/"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              (click)="closeNavbar()"
-              >Home</a
-            >
-            <a
-              class="navbar-item"
-              routerLink="/projects"
-              routerLinkActive="active"
-              (click)="closeNavbar()"
-              >About</a
-            > 
-            <a
-              class="navbar-item"
-              routerLink="/contact"
-              routerLinkActive="active"
-              (click)="closeNavbar()"
-              >Amenities</a
-            >
-            <a
+  <div class="align1">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a class="logo" href="/">
+          <img src="../../assets/images/header.svg" alt="" />
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="navbar-menu" [class.is-active]="navbarOpen">
+        <div class="navbar-end">
+          <a
+            class="navbar-item"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="closeNavbar()"
+            >Home</a
+          >
+          <a
+            class="navbar-item"
+            routerLink="/projects"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            >About</a
+          >
+          <a
+            class="navbar-item"
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            >Amenities</a
+          >
+          <a
             class="navbar-item"
             routerLink="/contact"
             routerLinkActive="active"
@@ -41,25 +41,29 @@
             >Plans</a
           >
           <a
-          class="navbar-item"
-          routerLink="/contact"
-          routerLinkActive="active"
-          (click)="closeNavbar()"
-          >Location</a
-        >
-        <a
-        class="navbar-item"
-        routerLink="/contact"
-        routerLinkActive="active"
-        (click)="closeNavbar()"
-        >Contact Us</a
-      >
-      <span *ngIf="navbarOpen" class="navbar-close" (click)="toggleNavbar()">
-        Back
-      </span>
-      
-          </div>
+            class="navbar-item"
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            >Location</a
+          >
+          <a
+            class="navbar-item"
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            >Contact Us</a
+          >
+          <span
+            *ngIf="navbarOpen"
+            class="navbar-close"
+            (click)="toggleNavbar()"
+          >
+            <mat-icon>arrow_back</mat-icon>
+            Back
+          </span>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </div>
+</div>

@@ -15,32 +15,32 @@
     position: relative;
     
   }
-  
-  .navbar-brand {
-    .logo {
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
-      position: relative;
-      display: flex;
-      gap: 16px;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      span {
-        color: #303031;
-        font-weight: 600;
-        letter-spacing: 2px;
-        font-size: 24px;
-      }
-  
-      
-  
-      img {
-        width: 100%;
-      }
-    }
+  img {
+    width: 100%;
   }
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    
+    span {
+      color: #303031;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 24px;
+    }
+
+    
+
+    
+  }
+  
+  
   .navbar-item.active {
     color: #71a894 !important; /* Adjust this color to match your design for an active link */
     font-weight: bolder; /* Optional: makes active link bold */
@@ -67,7 +67,7 @@
       text-decoration: none; /* Remove underline from links */
       transition: color 0.3s ease;
       padding-right: 10px;
-      font-family: "Proxima";
+      
       font-size: 22px;
     }
     .navbar-item::after {
@@ -95,64 +95,17 @@
   }
   
   .navbar-close {
-    position: absolute;
-    top: 88%;
-    right: 70%;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
     background: none;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
-  }
-  
-  @media (max-width: 780px) {
-    .navbar-menu {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: -300px;
-      width: 300px;
-      background: #bdbdbd;
-      overflow-y: auto; /* In case your menu is longer than the screen */
-      transition: right 0.6s ease; /* Animate the left property */
-      z-index: 1000; /* Ensure it's above other content */
-  
-      .navbar-item {
-        margin-bottom: 0.5rem;
-        color: white;
-      }
-    }
-    .navbar-end {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-left: 20px;
-      gap: 20px;
-    }
-  
-    .navbar-menu.is-active {
-      right: 0; /* Slide in to cover the left part of the screen */
-    }
-    .navbar {
-      img {
-        width: 250px !important;
-      }
-    }
-  
-    .navbar-toggler {
-      display: block;
-    }
-  
-    .navbar-close {
-      display: block;
-    }
-    .header{
-      padding: 0px;
-    }
-    .navbar{
-      margin-bottom: 20px;
-    }
-    
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (max-width: 1400px) {
@@ -163,3 +116,62 @@
       margin: 0px;
     }
   }
+  
+  @media (max-width: 1006px) {
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      background: #f2ede1;
+      overflow-y: auto; /* In case your menu is longer than the screen */
+      transition: right 0.6s ease; /* Animate the left property */
+      z-index: 1000; /* Ensure it's above other content */
+  
+      .navbar-item {
+        margin-bottom: 0.5rem;
+        color: black;
+      }
+    }
+    .navbar-end {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      gap: 20px;
+    }
+  
+    .navbar-menu.is-active {
+      width: 100%;
+      right: 0; /* Slide in to cover the left part of the screen */
+    }
+    img {
+      width: 250px ;
+    }
+  
+  
+    .navbar-toggler {
+      display: block;
+    }
+ 
+    .header{
+      padding: 0px;
+    }
+    .navbar{
+      margin-bottom: 20px;
+    }
+    
+  }
+
+  @media (max-width: 480px) 
+  {
+    img{
+      width: 60%;
+    }
+    
+  }
+
+
