@@ -11,6 +11,11 @@
     display: flex;
     justify-content: space-evenly;
   }
+  h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   /* Add your styles here */
 .google-map {
   iframe {
@@ -27,14 +32,11 @@
     // ... your existing styles ...
 
     .google-map {
-      width: 100%; // Adjust as needed
+      width: 600px; // Adjust as needed
       height: 350px; // Adjust as needed
       position: relative;
+      bottom: 15px;
       left: 20%;
-      iframe {
-        width: 70%;
-        height: 100%;
-      }
     }
 
     // ... rest of your styles ...

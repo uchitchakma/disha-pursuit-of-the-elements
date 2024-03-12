@@ -24,8 +24,7 @@ export class HomeSlide8Component {
   user_name: string = '';
   user_email: string = '';
   user_phone: string = '';
-  org_name: string = ''; // Declare org_name here
-  message: string = '';
+
 
   constructor(private router: Router) {
     emailjs.init('UjSp-NfRpp8HRL7jU'); // Initialize EmailJS with your actual user ID
@@ -45,8 +44,6 @@ export class HomeSlide8Component {
       user_name: this.user_name,
       user_email: this.user_email,
       user_phone: this.user_phone,
-      org_name: this.org_name,
-      message: this.message,
     };
 
     emailjs

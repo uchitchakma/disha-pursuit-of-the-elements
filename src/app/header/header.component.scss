@@ -70,7 +70,7 @@
       text-decoration: none; /* Remove underline from links */
       transition: color 0.3s ease;
       padding-right: 10px;
-      
+      cursor: pointer;
       font-size: 22px;
     }
     .navbar-item::after {
@@ -94,6 +94,7 @@
       color: #fff; /* Text color */
       transition: color 0.3s ease;
       color: #259cb1; /* Highlight color on hover for consistency */
+      cursor: pointer;
     }
   }
   

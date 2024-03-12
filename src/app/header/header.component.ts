@@ -21,7 +21,7 @@ export class HeaderComponent {
     { name: 'Amenities', slideIndex: 3 },
     { name: 'Plans', slideIndex: 4 },
     { name: 'Location', slideIndex: 6 },
-    { name: 'Contact Us', slideIndex: 7 }
+    { name: 'Contact Us', slideIndex: 8 }
   ];
 
   constructor(private sharedService: SharedService) {}
