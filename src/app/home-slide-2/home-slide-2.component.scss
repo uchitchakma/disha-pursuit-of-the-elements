@@ -40,7 +40,7 @@ img {
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center; // changed from space-around for consistent alignment
+  justify-content: space-around; // changed from space-around for consistent alignment
   align-items: center;
   color: white; /* Choose text color that contrasts with your image */
   font-size: 20px; /* Adjust size as needed */
@@ -55,10 +55,15 @@ p {
   line-height: 35px;
   text-align: center;
 }
+.mobile-text{
+  display: none;
+}
 
 @media (max-width: 780px) {
   h2 {
     font-size: 24px;
+    position: relative;
+    bottom: 15px;
   }
   p {
     font-size: 18px;
@@ -67,5 +72,12 @@ p {
   }
   .text-overlay {
     padding: 1rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile-text {
+    display: block;
+    line-height: 30px;
   }
 }

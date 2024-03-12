@@ -1,65 +1,12 @@
-<!-- landing.component.html -->
 <main class="landing">
   <div class="carousel" appScrollHorizontal #carousel>
-    <div class="slide slide1">
-      <app-home-slide-1></app-home-slide-1>
-    </div>
-    <div class="slide slide2" (click)="togglePage()">
-      <!-- <div *ngIf="showPage" [@fadeOutAnimation]> -->
-      <!-- Content that fades in -->
-        <app-home-slide-2></app-home-slide-2>
-      <!-- <div *ngIf="!showPage" [@fadeInAnimation]>
-        <div class="content">
-          <section class="section sec1">
-            <img src="../../assets/images/about.svg" alt="" />
-            <div class="text-overlay">
-              <h1>ABOUT DPE</h1>
-            </div>
-          </section>
-          <section class="section sec2">
-            <div class="left">
-              <img src="../../assets/images/fam.svg" alt="" />
-            </div>
-            <div class="right">
-              <h3>Discover Community Like Never Before</h3>
-              <p>
-                At Disha, we believe in creating spaces that are more than just
-                living spaces; they are vibrant communities brimming with life
-                and laughter. Here, we don't just build homes to sell; we craft
-                ecosystems of joy and camaraderie. Imagine stepping into a realm
-                where every day is an ode to celebration and connection, a place
-                to experience joy and forge lasting relationships within a
-                community that truly feels like home.
-              </p>
-            </div>
-          </section>
-        </div>
-      </div> -->
-    </div>
-    <div class="slide slide3">
-      <app-home-slide-3></app-home-slide-3>
-    </div>
-    <div class="slide slide4">
-      <app-home-slide-4></app-home-slide-4>
-    </div>
-    <div class="slide slide5">
-     <app-home-slide-5></app-home-slide-5> 
-    </div>
-    <div class="slide slide6">
-      <app-home-slide-6></app-home-slide-6>
-    </div>
-    <div class="slide slide7">
-      <app-home-slide-7></app-home-slide-7>
-    </div>
-    <div class="slide slide8">
-      <app-home-slide-8></app-home-slide-8>
-    </div>
+    <!-- Slides will be dynamically loaded here -->
   </div>
-  <!-- landing.component.html -->
-<div class="carousel-indicators">
-  <span *ngFor="let slide of slides; let i = index" class="indicator"
-  [ngStyle]="{'background-color': currentSlide === i ? indicatorActiveColors[i] : '#bbb'}"
-  (click)="scrollToSlide(i)"></span>
-</div>
-
+  <div class="carousel-indicators">
+    <span *ngFor="let slide of slidesConfig; let i = index" class="indicator"
+          [class.active]="currentSlide === i"
+          [class.inactive]="currentSlide !== i"
+          [class.special-color-indicator]="(currentSlide === 1 || currentSlide === 2) && currentSlide === i"
+          (click)="scrollToSlide(i)"></span>
+  </div>
 </main>

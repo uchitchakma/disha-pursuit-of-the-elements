@@ -19,7 +19,16 @@
   scroll-behavior: smooth; /* Optional: for smoother scrolling */
 }
 
+.indicator.active {
+  background-color: #1f1c1c; // Active color
+}
 
+.indicator.inactive {
+  background-color: #bbb; // Inactive color
+}
+.indicator.special-color-indicator {
+  background-color: white; // Special color for slides 2 and 3
+}
 
 .carousel-indicators {
   text-align: center;

@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

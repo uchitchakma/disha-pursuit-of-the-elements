@@ -7,7 +7,7 @@
       content: "";
       height: 100%;
       width: 100%;
-      background: #0000007a;
+      background: rgb(0 0 0 / 60%);
     }
     }
   .text-overlay {
@@ -78,11 +78,18 @@
     }
     .num {
       font-size: 64px;
+      font-weight: 700;
+      
+     
     }
     .txt {
       font-size: 24px;
+      line-height: 75px;
     }
- 
+    .btm{.txt{
+      align-self: center;
+    }
+    }
   }
   .right {
     display: flex;
@@ -124,20 +131,26 @@
     }
  
     .left{
-      .top{
-        gap: 0;
+      .top, .btm{
+        gap: 20px;
         margin: 0;
+        .sec{
+          margin: 15px;
+        }
       }
       .num {
-        font-size: 40px;
+        font-size: 36px;
+        align-self: center;
       }
       .txt {
         font-size: 20px;
+        line-height: 40px;
       }
     }
     .right{
       p{
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 25px;
       }
     }
     
