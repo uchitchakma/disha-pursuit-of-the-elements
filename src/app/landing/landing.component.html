@@ -1,12 +1,40 @@
 <main class="landing">
-  <div class="carousel" appScrollHorizontal #carousel>
-    <!-- Slides will be dynamically loaded here -->
-  </div>
-  <div class="carousel-indicators">
-    <span *ngFor="let slide of slidesConfig; let i = index" class="indicator"
-          [class.active]="currentSlide === i"
-          [class.inactive]="currentSlide !== i"
-          [class.special-color-indicator]="(currentSlide === 1 || currentSlide === 2) && currentSlide === i"
-          (click)="scrollToSlide(i)"></span>
+  <div class="carousel" >
+    <div class="slide">
+      <app-home-slide-1 />
+    </div>
+    <div class="slide">
+      <app-home-slide-2 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-3 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-4 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-5 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-6 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-7 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-8 />
+
+    </div>
+    <div class="slide">
+      <app-home-slide-9 />
+
+    </div>
+
   </div>
 </main>
