@@ -35,7 +35,7 @@ import * as SlideComponents from '../home-slides';
 })
 export class LandingComponent implements AfterViewInit, OnDestroy {
   currentSlide = 0;
-  showPage = true;
+  showPage = true; // Controls the display of the content
 
   slidesConfig = [
     { component: SlideComponents.HomeSlide1Component },

@@ -1,81 +1,67 @@
+.content {
+  display: flex;
+  justify-content: space-evenly;
+}
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* Add your styles here */
 .body {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    position: relative;
-    bottom: 10%;
-    align-items: center;
-    width: 90%;
-  }
-  .content {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  h2{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  /* Add your styles here */
-.google-map {
-  iframe {
-    width: 100%;
-    height: 100%;
-    // additional styles if needed
-  }
+  width: 90%;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
 }
 
-  .left {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    // ... your existing styles ...
+.accordion-item {
+  border-bottom: 1px solid #eee; /* optional: for styling */
+}
 
-    .google-map {
-      width: 600px; // Adjust as needed
-      height: 350px; // Adjust as needed
-      position: relative;
-      bottom: 15px;
-      left: 20%;
-    }
+iframe {
+  width: 100%;
+  height: 100%;
+  // additional styles if needed
+}
 
-    // ... rest of your styles ...
+.left {
+ 
+  display: flex;
+  justify-content: center;
+  
+
+  // ... rest of your styles ...
+}
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  .info-toggle {
+    cursor: pointer; /* Makes it clear the plus symbol is clickable */
+    margin-left: 5px; /* Adjust as needed */
   }
-  .right {
-    width: 50%;
-    /* landing.component.scss */
 
-    .info-toggle {
-      cursor: pointer; /* Makes it clear the plus symbol is clickable */
-      margin-left: 5px; /* Adjust as needed */
-    }
-
-    .info-wrapper {
-      height: 0;
-      overflow: hidden;
-      transition: height 0.5s ease-out; /* Smooth transition for the height */
-    }
-
-    .info-content {
-      padding: 10px;
-      /* Add other styles for your info content here */
-    }
-
-    /* This style will apply when the additional info is shown */
-    .info-wrapper.show {
-      height: auto; /* Adjust to the natural height of the content */
-    }
-
-    .head {
-      font-size: 20px;
-      font-weight: bold;
-      width: 100%;
-      padding: 10px 0px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .data {
-      display: flex;
-      flex-direction: column;
-    }
+  .info-wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-out; /* Smooth transition for the height */
   }
+
+  .info-content {
+    padding: 10px;
+    /* Add other styles for your info content here */
+  }
+
+  /* This style will apply when the additional info is shown */
+  .info-wrapper.show {
+    height: auto; /* Adjust to the natural height of the content */
+  }
+
+  p {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0px;
+  }
+}
