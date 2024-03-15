@@ -19,6 +19,9 @@ h2 {
   border-bottom: 1px solid #eee; /* optional: for styling */
 }
 
+
+
+
 iframe {
   width: 100%;
   height: 100%;
@@ -63,5 +66,15 @@ iframe {
     font-size: 20px;
     width: 100%;
     padding: 10px 0px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    height: 20vh;
   }
 }

@@ -43,7 +43,16 @@ h1{
   flex-wrap: wrap;
 }
 
-
+.slide7{
+  .accordion-item {
+    background: transparent !important;
+    border: 0;
+    width: 175%;
+  }
+ .accordion-button {
+    background-color: transparent !important;
+  }
+}
 
 .indicator.active {
   background-color: #666; /* Highlight the active indicator */
@@ -73,6 +82,12 @@ h1{
   align-items: center;
 }
 
+@media (max-width: 1000px) {
+  .accordion-button {
+    padding: 10px !important;
+  }
+}
+
 @media screen and (max-height: 850px) {
   .content {
    /* Example height for laptops */
@@ -88,6 +103,10 @@ h1{
   .align {
     height: 475px;
   }
+  .slide7{
+  .accordion-body{
+    padding: 10px 20px;
+  }}
 }
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';

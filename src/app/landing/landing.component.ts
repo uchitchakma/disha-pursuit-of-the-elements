@@ -1,6 +1,4 @@
-import {
-  Component,
-} from '@angular/core';
+import { Component, ViewChild, ElementRef, ChangeDetectorRef} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ScrollHorizontalDirective } from '../scroll-horizontal.directive';
@@ -34,4 +32,44 @@ import { HomeSlide9Component } from '../home-slides';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent {
+  @ViewChild('carousel') carousel!: ElementRef;
+  slides = Array(9).fill(0).map((x, i) => i); // Representing your 9 slides
+  activeSlideIndex = 0;
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    // Optional: Initialization logic here
+  }
+
+  onScroll(): void {
+    const carouselElement = this.carousel.nativeElement;
+    const scrollPosition = carouselElement.scrollLeft + carouselElement.offsetWidth / 2; // Center point for more accurate index
+    const slides = carouselElement.querySelectorAll('.slide');
+    
+    let cumulativeWidth = 0;
+    for (let i = 0; i < slides.length; i++) {
+      cumulativeWidth += slides[i].offsetWidth;
+      if (cumulativeWidth >= scrollPosition) {
+        this.activeSlideIndex = i;
+        break;
+      }
+    }
+    this.cdr.detectChanges(); // Manually trigger change detection
+  }
+
+  goToSlide(slideIndex: number): void {
+    this.activeSlideIndex = slideIndex;
+    const carouselElement = this.carousel.nativeElement;
+    const slides = carouselElement.querySelectorAll('.slide');
+    let targetPosition = 0;
+    for (let i = 0; i < slideIndex; i++) {
+      targetPosition += slides[i].offsetWidth;
+    }
+    carouselElement.scrollLeft = targetPosition;
+    this.cdr.detectChanges(); // Update after manual scroll too
+  }
+  isSpecialSlide(index: number): boolean {
+    return index === 1 || index === 2; // Special color for slides 2 and 3
+  }
 }
