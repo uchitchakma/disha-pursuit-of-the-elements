@@ -1,7 +1,8 @@
-import { Component, ViewChild, ElementRef, ChangeDetectorRef} from '@angular/core';
+import { Component, ViewChild, ElementRef, ChangeDetectorRef, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ScrollHorizontalDirective } from '../scroll-horizontal.directive';
+import { SharedService } from '../shared.service';
 import { HomeSlide1Component } from '../home-slides';
 import { HomeSlide2Component } from '../home-slides';
 import { HomeSlide3Component } from '../home-slides';
@@ -31,15 +32,17 @@ import { HomeSlide9Component } from '../home-slides';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   @ViewChild('carousel') carousel!: ElementRef;
   slides = Array(9).fill(0).map((x, i) => i); // Representing your 9 slides
   activeSlideIndex = 0;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private sharedService: SharedService) {}
 
   ngOnInit(): void {
-    // Optional: Initialization logic here
+    this.sharedService.scrollToSlideEvent.subscribe((index: number) => {
+      this.goToSlide(index);
+    });
   }
 
   onScroll(): void {

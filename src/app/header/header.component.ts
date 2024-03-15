@@ -10,7 +10,7 @@ import { SharedService } from '../shared.service';
   standalone: true,
   imports: [MatIconModule, CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   
@@ -27,6 +27,7 @@ export class HeaderComponent {
   constructor(private sharedService: SharedService) {}
 
   emitSlideSelect(slideIndex: number) {
+    console.log(`Emitting slide select for index: ${slideIndex}`);
     this.sharedService.changeSlide(slideIndex);
   }
 

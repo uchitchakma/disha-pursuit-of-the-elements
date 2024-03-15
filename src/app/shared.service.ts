@@ -1,15 +1,14 @@
 // shared.service.ts
 import { Injectable, EventEmitter } from '@angular/core';
 
-
 @Injectable({ providedIn: 'root' })
 export class SharedService {
-    scrollToSlideEvent = new EventEmitter<number>();
+  scrollToSlideEvent = new EventEmitter<number>();
 
-    constructor() {}
+  constructor() {}
   
-
   changeSlide(index: number) {
-    this.scrollToSlideEvent.emit(index);;
+    console.log(`Change slide event emitted for index: ${index}`);
+    this.scrollToSlideEvent.emit(index);
   }
 }
