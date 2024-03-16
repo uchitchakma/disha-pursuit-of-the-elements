@@ -1,5 +1,11 @@
 h2{
-    position: relative;
-      bottom: 30%;
-    }
+  position: relative;
+  bottom: 30%;
   
+}
+
+@media (max-width: 780px) {
+  h2{
+  font-size: 20px;
+  }
+}

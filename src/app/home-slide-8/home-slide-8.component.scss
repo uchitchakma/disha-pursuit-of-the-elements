@@ -70,16 +70,29 @@
   }
   
   /* Media query for mobile responsiveness */
-  @media (max-width: 768px) {
+  @media (max-width: 780px) {
     .contact-form {
       padding: 1rem;
+      gap: 0;
     }
-  
+    .contact-form button {
+      padding: 10px;
+      width: 100px;
+    }
     .contact-form .form-group {
       margin-bottom: 1rem;
     }
   
     .body {
       padding: 1rem;
+    }
+    .head{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .contact-form .form-group input[type="text"],
+    .contact-form .form-group input[type="email"],
+    .contact-form .form-group input[type="tel"] {
+      padding: 5px;
     }
   }

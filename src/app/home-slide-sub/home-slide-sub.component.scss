@@ -1,11 +1,15 @@
-.section{
+
+* {
+  animation: fadeInScale 1s ease-out forwards;
+}
+.section {
   margin-bottom: 50px;
 }
-.section1{
-.text-overlay {
+.section1 {
+  .text-overlay {
     z-index: 4;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around; // changed from space-around for consistent alignment
@@ -17,52 +21,89 @@
     box-sizing: border-box; // Ensures padding does not affect width
     gap: 40px;
   }
-  .content {
-    background-image: url("../../assets/images/about.svg");
-    background-size: cover;
-    overflow: hidden;
-    &::before {
-      position: absolute;
-      z-index: 2;
-      content: "";
-      height: 100%;
-      width: 100%;
-      background: #0000007a;
-      position: relative;
-    }
-  }
+.content {
+  background-image: url("../../assets/images/about.svg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative; /* Ensure this container is positioned to act as the anchor for the absolutely positioned ::before */
+}
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* These zero values stretch the ::before element to cover the entire .content area */
+  background: rgba(0, 0, 0, 0.47); /* Use RGBA for a semi-transparent black overlay */
+  z-index: 2; /* Ensure this is above the background image but below the content inside .content */
+}
   img {
     width: 100%;
     height: auto;
     border-radius: 20px;
   }
 }
-.section2 , .section4{
-  img{
+.section2,
+.section4 {
+  img {
     width: 80%;
   }
-  .left, .right{
+  .left,
+  .right {
     width: 50%;
   }
 }
 
-.section3{
-  img{
+.section3 {
+  img {
     width: 100%;
+    margin-bottom: 50px;
   }
-  .align-sub{
+  .align-sub {
     display: flex;
     flex-direction: column;
   }
-  h3{
+  h3 {
     margin-bottom: 15px;
   }
-  h3, p{
+  h3,
+  p {
     display: flex;
     justify-content: center;
   }
-  p{
+  p {
     width: 80%;
   }
 }
 
+.section4{
+  img{
+    float: right;
+  }
+}
+
+@media (max-width: 780px) {
+  .section2,
+  .section4 {
+    img {
+      margin-bottom: 20px;
+      width: 70%;
+    }
+    .align-sub {
+      display: flex;
+      flex-direction: column;
+    }
+    .left,
+    .right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .section3{
+    p{
+    width: 100%;
+  }
+}}

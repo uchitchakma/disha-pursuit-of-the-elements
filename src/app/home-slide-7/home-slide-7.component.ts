@@ -10,4 +10,6 @@ import { AccordionComponent } from '../accordion/accordion.component';
   templateUrl: './home-slide-7.component.html',
   styleUrls: ['./home-slide-7.component.scss'],
 })
-export class HomeSlide7Component {}
+export class HomeSlide7Component {
+  
+}

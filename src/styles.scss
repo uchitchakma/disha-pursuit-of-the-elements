@@ -2,12 +2,16 @@
   margin: 0;
   padding: 0;
 }
+.content-full-screen-modal .mat-dialog-container {
+  border-radius: 0 !important; // Optional: for full width
+  padding: 0 !important; // Optional: if you want edge-to-edge content inside the dialog
+}
 body{
   font-family: "Bai Jamjuree";
 
 }
-h1{
-  font-weight: 700;
+h1, h2{
+  font-weight: 700 !important;
 }
 .landing {
   height: 100%;
@@ -41,6 +45,7 @@ h1{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  font-family: "Bai Jamjuree";
 }
 
 .slide7{
@@ -115,6 +120,7 @@ h1{
   .accordion-body{
     padding: 10px 20px;
   }}
+
 }
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';

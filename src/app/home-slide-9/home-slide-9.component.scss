@@ -23,18 +23,19 @@
 
   @media (max-width: 780px) {
     p{
-        font-size: 15px !important;
-        width: 90%;
-        font-size: 18px;
-      }
-      .text{
-        line-height: 20px;
-      }
-      h2{
-        font-size: 20px;
-        padding: 0px 83px;
-        text-align: center;
-       position: relative;
-       bottom: 20px;
-      }
+      font-size: 13px;
+      width: 90%;
+      margin: 0;
+    }
+    .text{
+      line-height: 16px;
+    }
+    h2{
+      font-size: 20px;
+      padding: 0px 70px;
+      text-align: center;
+     position: relative;
+     bottom: 20px;
+    }
 }
+   

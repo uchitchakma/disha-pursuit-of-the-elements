@@ -37,14 +37,21 @@
 
 }
 @media (max-width: 780px) {
+  h2{
+    font-size: 20px !important;
+    margin-top: 40px;
+  }
   .left{
   img{
-    width: 135px;
+    width: 100px;
+    margin-top: 50px;
   }
+  
 }
 .right{
   p{
-    font-size: 18px;
+    font-size: 15px;
     width: 100%;
+    line-height: 20px;
   }
 }}
