@@ -21,7 +21,7 @@
 
 @keyframes moveDown {
   to {
-    transform: translateY(230px);
+    transform: translateY(250%);
   }
 }
 
@@ -32,6 +32,8 @@
 .move-down {
   animation: moveDown 0.5s ease-out forwards;
 }
+
+
 
 .sec2 {
   display: flex;

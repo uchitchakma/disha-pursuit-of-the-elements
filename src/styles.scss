@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --mdb-body-font-family: initial;
+  --mdb-body-font-size: initial;
+  --mdb-body-font-weight: initial;
+  --mdb-body-line-height: initial;
+  --mdb-body-color: initial !important;
+  --mdb-body-bg: initial;
+  --mdb-body-text-align: initial;
+}
+
 .content-full-screen-modal .mat-dialog-container {
   border-radius: 0 !important; // Optional: for full width
   padding: 0 !important; // Optional: if you want edge-to-edge content inside the dialog
@@ -94,6 +104,8 @@ h1, h2{
   margin-right: auto;
   align-items: center;
 }
+
+
 
 @media (max-width: 1000px) {
   .accordion-button {

@@ -1,6 +1,7 @@
 
 * {
   animation: fadeInScale 1s ease-out forwards;
+
 }
 .section {
   margin-bottom: 50px;
@@ -9,7 +10,7 @@
   .text-overlay {
     z-index: 4;
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 270px);
     display: flex;
     flex-direction: column;
     justify-content: space-around; // changed from space-around for consistent alignment
