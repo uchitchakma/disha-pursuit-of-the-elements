@@ -2,8 +2,84 @@
     background-color: white;
   }
 img{
-  width: 100%;
+  width: 50%;
 }
+.body{
+  display: flex;
+}
+.custom-list {
+  counter-reset: item; // Initialize the counter
+  list-style-type: none;
+  padding-left: 0;
+  width: 250px;
+  margin-left: 26px;
+  li {
+    position: relative;
+    color: #4a709d;
+    padding-left: 30px; // Space for custom markers or numbers
+    margin-bottom: 10px;
+    // Numbering for items 1 to 15
+    &:nth-child(-n + 15)::before {
+      content: counter(item); // Use the counter
+      counter-increment: item; // Increment the counter
+      position: absolute;
+      left: 0;
+      background-color: #4a709d;
+      color: white;
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+    &:nth-child(16)::before {
+      content: url("../../assets/icons/star.svg"); // Path to your icon image
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    // Colored block for items after 15
+    &:nth-child(n + 17):nth-child(-n + 21)::before {
+      content: "";
+      width: 18px;
+      height: 10px;
+      border: 1px solid black;
+      // background-color: black;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      transform: translateY(-50%);
+    }
+    &:nth-child(17)::before {
+      background-color: #f2f2f2;
+    }
+    &:nth-child(18)::before {
+      background-color: #e9d09a;
+    }
+    &:nth-child(19)::before {
+      background-color: #cfbede;
+    }
+    &:nth-child(20)::before {
+      background-color: #d6d6d8;
+    }
+    &:nth-child(21)::before {
+      background-color: #717370;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 780px) {
   img{
     width: 80vw;

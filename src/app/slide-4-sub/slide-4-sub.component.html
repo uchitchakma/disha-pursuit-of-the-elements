@@ -1,0 +1,15 @@
+<section class="section section1">
+    <div class="content">
+    </div>
+</section>
+
+<section appSlideFromBottom class="section section2">
+    <div class="align-sub">
+        <div class="items">
+            <div class="item" *ngFor="let amenity of amenities">
+                <img [src]="amenity.iconPath" [alt]="amenity.name">
+                <p>{{ amenity.name }}</p>
+            </div>
+        </div>
+    </div>
+</section>

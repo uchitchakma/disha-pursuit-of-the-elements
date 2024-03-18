@@ -1,0 +1,70 @@
+.content{
+    height: 70vh;
+}
+.section1{
+    margin-bottom: 100px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Targeting specific items based on their position */
+.items .item:nth-child(1),
+.items .item:nth-child(4),
+.items .item:nth-child(5),
+.items .item:nth-child(7),
+.items .item:nth-child(8) {
+    line-height: 0;
+}
+.items .item:nth-child(8){
+    position: relative;
+    bottom: 20px;
+}
+.items .item:nth-child(10){
+    position: relative;
+    bottom: 10px;
+}
+
+@media (max-width: 1350px) {
+    .items{
+        gap: 40px;
+    }
+}
+@media (max-width: 780px) {
+    .section1{
+        margin-bottom: 50px;
+    }
+    .items{
+        gap: 15px;
+        
+    }
+    .items .item{
+        width: 30%;
+    }
+    .items .item img {
+        width: 80%; /* Adjust this value as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .items .item p {
+        font-size: 13px;
+        text-align: -webkit-center;
+
+    }
+    .items .item:nth-child(1),
+    .items .item:nth-child(4),
+    .items .item:nth-child(5),
+    .items .item:nth-child(7),
+    .items .item:nth-child(8){
+        position: relative;
+        bottom: 0;
+        line-height: normal;
+    }
+
+}

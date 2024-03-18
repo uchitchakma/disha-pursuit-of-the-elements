@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HomeSlideSubComponent } from '../home-slide-sub/home-slide-sub.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home-slide-2',
   standalone: true,
+  imports: [MatIconModule],
   templateUrl: './home-slide-2.component.html',
   styleUrls: ['./home-slide-2.component.scss']
 })
@@ -35,7 +37,7 @@ export class HomeSlide2Component {
           console.log('The dialog was closed');
           // Reset the animations if needed
         });
-      }, 500); // Adjust this duration to match the time it takes for h2 to move down
+      }, 700); // Adjust this duration to match the time it takes for h2 to move down
     }, 500); // Adjust this duration to match the fade-out animation length
   }
 }
