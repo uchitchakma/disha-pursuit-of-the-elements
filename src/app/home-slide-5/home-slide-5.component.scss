@@ -1,11 +1,15 @@
 .content{
     background-color: white;
+    cursor: pointer;
   }
 img{
   width: 50%;
 }
 .body{
   display: flex;
+}
+h2{
+  margin-bottom: 20px;
 }
 .custom-list {
   counter-reset: item; // Initialize the counter
@@ -17,7 +21,7 @@ img{
     position: relative;
     color: #4a709d;
     padding-left: 30px; // Space for custom markers or numbers
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     // Numbering for items 1 to 15
     &:nth-child(-n + 15)::before {
       content: counter(item); // Use the counter
@@ -26,8 +30,8 @@ img{
       left: 0;
       background-color: #4a709d;
       color: white;
-      width: 21px;
-      height: 21px;
+      width: 20px;
+      height: 20px;
       display: flex;
       align-items: center;
       justify-content: center;

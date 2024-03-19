@@ -29,7 +29,8 @@ export class HomeSlide2Component {
         const dialogRef = this.dialog.open(HomeSlideSubComponent, {
           maxWidth: '100vw',
           width: '100vw',
-          height: '100vh',
+          height: 'calc(100vh - 230px)',
+          position: { top: '180px' },
           panelClass: 'content-full-screen-modal',
         });
 

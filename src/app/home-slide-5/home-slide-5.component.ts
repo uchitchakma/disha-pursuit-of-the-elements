@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Slide5SubComponent } from '../slide-5-sub/slide-5-sub.component';
 
 @Component({
   selector: 'app-home-slide-5',
@@ -33,4 +35,23 @@ export class HomeSlide5Component {
     'BASEMENT RAMP',
     'SURFACE PARKING - 140',
   ];
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    const h2Element = document.querySelector('.text-overlay h2');
+    h2Element?.classList.add('fade-out');
+    setTimeout(() => {
+      const dialogRef = this.dialog.open(Slide5SubComponent, {
+        maxWidth: '100vw',
+        width: '100vw',
+        height: '100vh',
+        panelClass: 'content-full-screen-modal',
+      });
+      
+      dialogRef.afterClosed().subscribe(() => {
+        console.log('The dialog was closed');
+        // Reset the animations if needed
+      });
+  }, 500); // Adjust this duration to match the fade-out animation length
+}
 }

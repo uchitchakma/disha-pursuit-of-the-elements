@@ -1,0 +1,153 @@
+.section{
+  margin-bottom: 50px;
+}
+.content{
+    background-color: white;
+  }
+img{
+  width: 65%;
+}
+.body{
+  display: flex;
+}
+h2{
+  margin-bottom: 20px;
+}
+.custom-list {
+  counter-reset: item; // Initialize the counter
+  list-style-type: none;
+  padding-left: 0;
+  width: 250px;
+  margin-left: 26px;
+  li {
+    position: relative;
+    color: #4a709d;
+    padding-left: 30px; // Space for custom markers or numbers
+    // margin-bottom: 10px;
+    // Numbering for items 1 to 15
+    &:nth-child(-n + 15)::before {
+      content: counter(item); // Use the counter
+      counter-increment: item; // Increment the counter
+      position: absolute;
+      left: 0;
+      background-color: #4a709d;
+      color: white;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+    &:nth-child(16)::before {
+      content: url("../../assets/icons/star.svg"); // Path to your icon image
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    // Colored block for items after 15
+    &:nth-child(n + 17):nth-child(-n + 21)::before {
+      content: "";
+      width: 18px;
+      height: 10px;
+      border: 1px solid black;
+      // background-color: black;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      transform: translateY(-50%);
+    }
+    &:nth-child(17)::before {
+      background-color: #f2f2f2;
+    }
+    &:nth-child(18)::before {
+      background-color: #e9d09a;
+    }
+    &:nth-child(19)::before {
+      background-color: #cfbede;
+    }
+    &:nth-child(20)::before {
+      background-color: #d6d6d8;
+    }
+    &:nth-child(21)::before {
+      background-color: #717370;
+    }
+  }
+}
+
+.section2{
+  .top-div, .bottom-div{
+    display: flex;
+    width: 90%;
+    place-content: center;
+    gap: 40px;
+  }
+  .align-sub{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .tile {
+    width: 40%;
+    height: 300px;
+    text-align: center;
+    background-color: white;
+    // box-shadow: 0px 0px 6px #e6e6e6;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+    box-shadow: 0px 0px 6px #e6e6e6; /* Re-enabled box-shadow */
+  }
+  .tile1{
+    background-color:#F2F2F3;
+  }
+  .tile2{
+    background-color:#CFBEDD;
+  }
+  .tile3{
+    background-color:#E9CE98;
+  }
+  .tile4{
+    background-color:#D6D6D7;
+  }
+  .tile:hover {
+    transform: scale(1.02); /* Increase size by 1.02 times */
+    box-shadow: 0px 0px 12px #cccccc; /* Darker box-shadow on hover */
+  }
+  
+  /* Hover state for .tile1 */
+  .tile1:hover {
+    background-color: darken(#F2F2F3, 10%); /* Adjust darkness as needed */
+  }
+  
+  /* Hover state for .tile2 */
+  .tile2:hover {
+    background-color: darken(#CFBEDD, 10%); /* Adjust darkness as needed */
+  }
+  
+  /* Hover state for .tile3 */
+  .tile3:hover {
+    background-color: darken(#E9CE98, 10%); /* Adjust darkness as needed */
+  }
+  
+  /* Hover state for .tile4 */
+  .tile4:hover {
+    background-color: darken(#D6D6D7, 10%); /* Adjust darkness as needed */
+  }
+  .material-icons.bullet-icon {
+    font-size: 10px; /* Smaller bullet icon */
+    vertical-align: middle; /* Aligns icon with the middle of the text */
+    margin-right: 8px; /* Space between the icon and text */
+  }
+  
+}

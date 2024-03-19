@@ -1,0 +1,42 @@
+.slide {
+    width: 20%; /* Example width, adjust as needed */
+    scroll-snap-align: start;
+  
+    height: calc(100vh - 270px);
+    min-width: 100vw;
+    flex: 0 0 100%; // Ensure slides are full width but not more
+   
+    scroll-snap-stop: always;
+    overflow: hidden;
+    
+  }
+  .carousel {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    overflow-x: auto; /* Explicitly allow horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; /* Optional: for smoother scrolling */
+  }
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff; /* Adjust color as needed */
+    z-index: 10;
+    user-select: none;
+  }
+  
+  .left-arrow {
+    left: 30px;
+    top: 50%;
+    color: #434e50;
+  }
+  
+  .right-arrow {
+    right: 30px;
+    top: 50%;
+    color: #434e50;
+  }

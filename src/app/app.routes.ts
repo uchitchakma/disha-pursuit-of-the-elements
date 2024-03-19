@@ -5,13 +5,15 @@ import { HomeSlideSubComponent } from '../app/home-slide-sub/home-slide-sub.comp
 import { HomeSlide2Component } from './home-slide-2/home-slide-2.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { Slide4SubComponent } from '../app/slide-4-sub/slide-4-sub.component';
+import { Slide5TowerComponent } from './slide-5-tower/slide-5-tower.component';
+import { Slide5SubComponent } from '../app/slide-5-sub/slide-5-sub.component';
 
 export const routes: Routes = [
     { path: '', component: LandingComponent },
     { path: 'sub', component:  HomeSlideSubComponent },
     { path: 'slide-2', component:  HomeSlide2Component },
-    { path: 'sub-4', component:  Slide4SubComponent },
+    { path: 'sub-t', component:  Slide5TowerComponent },
+    { path: 'sub-5', component:  Slide5SubComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,55 @@
+<section class="section section1">
+    <div class="content">
+        <div class="body">
+            <img src="../../assets/images/plan.svg" alt="">
+            <div class="lists">
+                <ol class="custom-list">
+                  <li *ngFor="let item of listItems">{{ item }}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section appSlideFromBottom class="section section2">
+    <div class="align-sub">
+      <div class="top-div">
+        <div class="tile tile1" (click)="openDialog(0)">
+            <h3>PREMIUM TOWER</h3>
+            <ul>
+                <li>TOWER PLAN</li>
+                <li>UNIT PLAN</li>
+                <li>2BHK</li>
+                <li>3BHK</li>
+              </ul>
+        </div>
+        <div class="tile tile2" (click)="openDialog(1)">
+            <h3>PRESIDENTIAL POWER</h3>
+            <ul>
+                <li>TOWER PLAN</li>
+                <li>UNIT PLAN</li>
+                <li>3BHK</li>
+                <li>4BHK</li>
+              </ul>
+        </div>
+      </div>
+      <div class="bottom-div">
+        <div class="tile tile3" (click)="openDialog(2)">
+            <h3>MILLENIUM TOWER</h3>
+            <ul>
+                <li>TOWER PLAN</li>
+                <li>UNIT PLAN</li>
+                <li>1BHK</li>
+              </ul>
+        </div>
+        <div class="tile tile4" (click)="openDialog(3)">
+            <h3>ROW VILLAS</h3>
+            <ul>
+                <li>ROW  VILLA LAYOUT</li>
+                <li>VILLA FLOOR PLLANS</li>
+              </ul>
+        </div>
+      </div>
+    </div>
+</section>
+      
