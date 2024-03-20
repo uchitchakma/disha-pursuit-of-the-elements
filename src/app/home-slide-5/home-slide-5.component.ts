@@ -44,7 +44,8 @@ export class HomeSlide5Component {
       const dialogRef = this.dialog.open(Slide5SubComponent, {
         maxWidth: '100vw',
         width: '100vw',
-        height: '100vh',
+        height: 'calc(100vh - 230px)', // Specified height
+        position: { top: '180px' } ,
         panelClass: 'content-full-screen-modal',
       });
       

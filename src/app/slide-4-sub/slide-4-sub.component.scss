@@ -1,8 +1,12 @@
+
 .content{
-    height: 70vh;
+    height: calc(100vh - 270px);
+}
+.section{
+    background-color: #F7F4ED;
 }
 .section1{
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 .items{
     display: flex;
@@ -32,15 +36,19 @@
     bottom: 10px;
 }
 
+  
+  
+
 @media (max-width: 1350px) {
     .items{
         gap: 40px;
     }
 }
 @media (max-width: 780px) {
-    .section1{
-        margin-bottom: 50px;
-    }
+    .content {
+        width: 90%;
+        
+      }
     .items{
         gap: 15px;
         

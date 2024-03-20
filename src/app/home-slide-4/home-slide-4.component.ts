@@ -13,20 +13,35 @@ export class HomeSlide4Component {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const h2Element = document.querySelector('.text-overlay h2');
-    h2Element?.classList.add('fade-out');
+    // Determine if the device is mobile based on the window's inner width
+    const isMobile = window.innerWidth < 768; // Example mobile breakpoint
+
+    // Configure dialog settings for mobile and PCs
+    const dialogConfig = {
+      maxWidth: '100vw',
+      width: '100vw',
+      height: isMobile ? 'calc(100vh - 160px)' : 'calc(100vh - 230px)', // Mobile: 80vh, PC: calc(100vh - 230px)
+      position: { top: isMobile ? '97px' : '180px' }, // Mobile: 100px from the top, PC: 180px from the top
+      panelClass: 'content-full-screen-modal',
+    };
+
+    // Fade-out effect for paragraphs
+    const paragraphs = document.querySelectorAll('.text-overlay p');
+    paragraphs.forEach(paragraph => paragraph.classList.add('fade-out'));
+
     setTimeout(() => {
-      const dialogRef = this.dialog.open(Slide4SubComponent, {
-        maxWidth: '100vw',
-        width: '100vw',
-        height: '100vh',
-        panelClass: 'content-full-screen-modal',
-      });
-      
-      dialogRef.afterClosed().subscribe(() => {
-        console.log('The dialog was closed');
-        // Reset the animations if needed
-      });
-  }, 500); // Adjust this duration to match the fade-out animation length
-}
+      const h2Element = document.querySelector('.text-overlay h2');
+      h2Element?.classList.add('move-down');
+
+      setTimeout(() => {
+        // Open the dialog with the configured settings
+        const dialogRef = this.dialog.open(Slide4SubComponent, dialogConfig);
+
+        // Handle dialog closure
+        dialogRef.afterClosed().subscribe(() => {
+          console.log('The dialog was closed');
+        });
+      }, 700); // Adjust based on h2 move-down animation duration
+    }, 500); // Adjust based on paragraph fade-out animation duration
+  }
 }

@@ -10,6 +10,11 @@ img{
 }
 h2{
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+p{
+  font-size: 18px;
 }
 .custom-list {
   counter-reset: item; // Initialize the counter
@@ -85,10 +90,70 @@ h2{
 }
 
 @media (max-width: 780px) {
-  img{
-    width: 80vw;
+  .content {
+    overflow-y: auto;
+    display: flex; /* Use flexbox to layout image and list side by side */
+    flex-direction: column; /* Stack them vertically on mobile */
+    align-items: center; /* Center items horizontally */
+    width: 90%;
   }
-  h2{
-    font-size: 20px;
+
+  img {
+    width: 10%; /* Full width */
+    margin-bottom: 10px; /* Adjust space below the image */
+    align-self: center;
   }
+
+  h2 {
+    font-size: 18px; /* Adjust the font size as needed */
+    width: 100%;
+    text-align: center;
+    padding: 0 10px; /* Add padding on the sides */
+  }
+
+  p {
+    font-size: 14px; /* Adjust the paragraph font size as needed */
+    line-height: 1.4; /* Adjust line height for readability */
+    margin: 0 10px 10px; /* Add margin on the sides and more on the bottom */
+  }
+  
+  .body {
+    width: 100%; /* Set width to full to handle the flex child sizing correctly */
+  }
+  
+  .custom-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns for list items */
+    gap: 0px 10px; /* Space between list items */
+    width: 100%; /* Full width */
+    margin: 10px 0px;
+    padding: 0; /* Remove padding */
+    list-style: none; /* Remove default list style */
+    counter-reset: item; /* Reset the list counter */
+  }
+
+  .custom-list li {
+    display: flex; /* Use flexbox for list item layout */
+    align-items: center; /* Align the counter and text vertically */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .custom-list li::before {
+    content: counter(item); /* Display the counter */
+    counter-increment: item; /* Increment the counter */
+    min-width: 16px; /* Adjust the width of the circle */
+    height: 16px; /* Adjust the height of the circle */
+    margin-right: 5px; /* Space between the circle and text */
+    background-color: #4a709d; /* Background color of the circle */
+    color: white; /* Color of the number */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    border-radius: 50%; /* Round the corners for a circle shape */
+    font-size: 10px; /* Smaller font size for the numbers */
+    padding: 2px; /* Adjust padding as needed */
+  }
+
+  /* Additional icon adjustments... */
 }
+

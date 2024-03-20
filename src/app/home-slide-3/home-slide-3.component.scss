@@ -102,6 +102,25 @@
   }
 
 
+  @media screen and (max-height: 850px) {
+    .left{
+      .num{
+        font-size: 50px;
+      }
+      .txt{
+        font-size: 22px;
+      }
+      .top, .btm{
+        margin: 0;
+      }
+    }
+    .right{
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
   @media (max-width: 1030px)
   {
     .left, .right{
@@ -125,6 +144,10 @@
     .text-overlay{
       padding: 10px;
     }
+      .content {
+        width: 90%;
+        
+      }
     
     h2{
       font-size: 20px;

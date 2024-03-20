@@ -16,6 +16,7 @@
 }
  .content{
   gap: 22px;
+  max-width: 1300px !important;
  } 
   
 @media (max-width: 1200px) {
@@ -28,7 +29,12 @@
     width: 90%;
   }
 
+  @media screen and (max-height: 850px) {
+    .content {
+      width: 65%;
+    }
 
+  }
 @media (max-width: 780px) {
   .content {
     width: 90%;

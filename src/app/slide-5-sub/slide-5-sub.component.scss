@@ -1,5 +1,6 @@
 .section{
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background-color: #F7F4ED;
 }
 .content{
     background-color: white;
@@ -13,6 +14,8 @@ img{
 h2{
   margin-bottom: 20px;
 }
+
+
 .custom-list {
   counter-reset: item; // Initialize the counter
   list-style-type: none;
@@ -150,4 +153,19 @@ h2{
     margin-right: 8px; /* Space between the icon and text */
   }
   
+}
+
+@media (max-width: 780px) {
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    width: 90%;
+    
+  }
 }

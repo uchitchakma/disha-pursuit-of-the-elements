@@ -13,6 +13,7 @@
   .carousel {
     display: flex;
     height: 100%;
+    background-color: #F7F4ED;
     flex-direction: row;
     overflow-x: auto; /* Explicitly allow horizontal scrolling */
     scroll-snap-type: x mandatory;
@@ -39,4 +40,11 @@
     right: 30px;
     top: 50%;
     color: #434e50;
+  }
+
+  @media (max-width: 780px) {
+    .content {
+      width: 90%;
+      
+    }
   }

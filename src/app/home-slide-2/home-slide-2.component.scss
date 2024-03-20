@@ -83,6 +83,11 @@ p {
   display: none;
 }
 
+@media screen and (max-height: 850px) {
+  p{
+    line-height: 27px;
+  }
+}
 @media (max-width: 780px) {
   h2 {
     font-size: 20px;
@@ -104,4 +109,9 @@ p {
     display: block;
     line-height: 30px;
   }
+
+    .content {
+      width: 90%;
+      
+    }
 }

@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-home-slide-2',
   standalone: true,
-  imports: [MatIconModule],
   templateUrl: './home-slide-2.component.html',
   styleUrls: ['./home-slide-2.component.scss']
 })
@@ -14,31 +13,35 @@ export class HomeSlide2Component {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    // Start fading out the paragraphs immediately
+    // Determine if the device is mobile based on the window's inner width
+    const isMobile = window.innerWidth < 768; // Example mobile breakpoint
+
+    // Configure dialog settings for mobile and PCs
+    const dialogConfig = {
+      maxWidth: '100vw',
+      width: '100vw',
+      height: isMobile ? '90vh' : 'calc(100vh - 230px)', // Mobile: 80vh, PC: calc(100vh - 230px)
+      position: { top: isMobile ? '97px' : '180px' }, // Mobile: 100px from the top, PC: 180px from the top
+      panelClass: 'content-full-screen-modal',
+    };
+
+    // Fade-out effect for paragraphs
     const paragraphs = document.querySelectorAll('.text-overlay p');
     paragraphs.forEach(paragraph => paragraph.classList.add('fade-out'));
 
-    // Wait for the fade-out animation to complete
     setTimeout(() => {
-      // Move the h2 tag down after paragraphs have faded
       const h2Element = document.querySelector('.text-overlay h2');
       h2Element?.classList.add('move-down');
 
-      // Open the dialog after the h2 has moved
       setTimeout(() => {
-        const dialogRef = this.dialog.open(HomeSlideSubComponent, {
-          maxWidth: '100vw',
-          width: '100vw',
-          height: 'calc(100vh - 230px)',
-          position: { top: '180px' },
-          panelClass: 'content-full-screen-modal',
-        });
+        // Open the dialog with the configured settings
+        const dialogRef = this.dialog.open(HomeSlideSubComponent, dialogConfig);
 
+        // Handle dialog closure
         dialogRef.afterClosed().subscribe(() => {
           console.log('The dialog was closed');
-          // Reset the animations if needed
         });
-      }, 700); // Adjust this duration to match the time it takes for h2 to move down
-    }, 500); // Adjust this duration to match the fade-out animation length
+      }, 700); // Adjust based on h2 move-down animation duration
+    }, 500); // Adjust based on paragraph fade-out animation duration
   }
 }

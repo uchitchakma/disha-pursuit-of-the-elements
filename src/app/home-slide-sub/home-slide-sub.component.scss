@@ -3,8 +3,14 @@
   // animation: fadeInScale 1s ease-out forwards;
 
 }
-.section {
-  margin-bottom: 50px;
+.section{
+  background-color: #F7F4ED;
+}
+.section2{
+  padding: 50px 0px;
+}
+.section3, .section4{
+  padding-bottom: 50px;
 }
 .section1 {
   .text-overlay {
@@ -71,8 +77,6 @@
   p {
     display: flex;
     justify-content: center;
-  }
-  p {
     width: 80%;
   }
 }
@@ -84,6 +88,10 @@
 }
 
 @media (max-width: 780px) {
+  .content {
+    width: 90%;
+    
+  }
   .section2,
   .section4 {
     img {

@@ -7,9 +7,9 @@ import { Slide5TowerComponent } from '../slide-5-tower/slide-5-tower.component';
 @Component({
   selector: 'app-slide-5-sub',
   standalone: true,
-  imports: [CommonModule, SlideFromBottomDirective ],
+  imports: [CommonModule, SlideFromBottomDirective],
   templateUrl: './slide-5-sub.component.html',
-  styleUrl: './slide-5-sub.component.scss'
+  styleUrls: ['./slide-5-sub.component.scss'] // Corrected property name from 'styleUrl' to 'styleUrls'
 })
 export class Slide5SubComponent {
   listItems = [
@@ -36,26 +36,30 @@ export class Slide5SubComponent {
     'BASEMENT RAMP',
     'SURFACE PARKING - 140',
   ];
+
   constructor(public dialog: MatDialog) {}
 
   openDialog(slideIndex: number): void {
+    // Initiating the fade-out effect
     const h2Element = document.querySelector('.text-overlay h2');
     h2Element?.classList.add('fade-out');
+
     setTimeout(() => {
-      const dialogConfig = new MatDialogConfig();
-  
-      dialogConfig.maxWidth = '100vw';
-      dialogConfig.width = '100vw';
-      dialogConfig.height = '100vh';
-      dialogConfig.panelClass = 'content-full-screen-modal';
-      dialogConfig.data = { slideIndex }; // Pass the slide index to the dialog
-  
-      const dialogRef = this.dialog.open(Slide5TowerComponent, dialogConfig);
-      
+      // Opening the dialog with specified configuration inline
+      const dialogRef = this.dialog.open(Slide5TowerComponent, {
+        maxWidth: '100vw',
+        width: '100vw',
+        height: 'calc(100vh - 230px)', // Specified height
+        position: { top: '180px' }, // Specified position
+        panelClass: 'content-full-screen-modal',
+        data: { slideIndex } // Passing data to the dialog component
+      });
+
+      // Handle the dialog closure with a subscription to the afterClosed observable
       dialogRef.afterClosed().subscribe(() => {
         console.log('The dialog was closed');
-        // Reset the animations if needed
+        // Actions after the dialog is closed
       });
-    }, 500); // Adjust this duration to match the fade-out animation length
+    }, 500); // Delay to match the fade-out effect's duration
   }
 }

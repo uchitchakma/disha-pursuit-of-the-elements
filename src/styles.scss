@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  
 }
 :root {
   --mdb-body-font-family: initial;
@@ -21,6 +22,8 @@
 
 body{
   font-family: "Bai Jamjuree" !important;
+  background-color: #F7F4ED !important;
+  overflow: hidden;
 
 }
 h1, h2{
@@ -127,6 +130,7 @@ h1, h2{
 
 @media screen and (max-height: 850px) {
   .content {
+    width: 65%;
    /* Example height for laptops */
   }
   .slide2, .slide3{
