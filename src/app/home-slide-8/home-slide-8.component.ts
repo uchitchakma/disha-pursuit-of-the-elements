@@ -24,6 +24,9 @@ export class HomeSlide8Component {
   user_name: string = '';
   user_email: string = '';
   user_phone: string = '';
+  size_1200: boolean = false;
+  size_1500: boolean = false;
+  size_1800: boolean = false;
 
 
   constructor(private router: Router) {

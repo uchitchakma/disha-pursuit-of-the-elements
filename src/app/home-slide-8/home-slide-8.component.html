@@ -36,6 +36,19 @@
                   (input)="validateNumber($event)"
                 />
               </div>
+              <div class="form-group checkboxes">
+                <p>I'M INTERESTED IN</p>
+                <label for="size_1200">
+                  <input type="checkbox" id="size_1200" name="size" value="1200" [(ngModel)]="size_1200"> 1200
+                </label>
+                
+                <label for="size_1500">
+                  <input type="checkbox" id="size_1500" name="size" value="1500" [(ngModel)]="size_1500"> 1500
+                </label>
+                <label for="size_1800">
+                  <input type="checkbox" id="size_1800" name="size" value="1800" [(ngModel)]="size_1800"> 1800
+                </label>
+              </div>
               
               <button type="submit" [disabled]="isSendingEmail">
                 {{ isSendingEmail ? "Sending..." : "SUBMIT" }}
