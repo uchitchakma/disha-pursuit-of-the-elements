@@ -15,13 +15,28 @@ export class HomeSlide4Component {
   openDialog(): void {
     // Determine if the device is mobile based on the window's inner width
     const isMobile = window.innerWidth < 768; // Example mobile breakpoint
+    const isMonitor = window.innerHeight > 1000; // Example laptop condition
 
-    // Configure dialog settings for mobile and PCs
+    // Configure dialog settings based on the device
+    let dialogHeight = 'calc(100vh - 150px)'; // Default for desktop
+    let dialogTop = '180px'; // Default for desktop
+
+    if (isMobile) {
+      // Mobile configuration
+      dialogHeight = '90vh';
+      dialogTop = '97px';
+    } else if (isMonitor) {
+      // Laptop configuration
+      dialogHeight = 'calc(100vh - 230px)';
+      dialogTop = '180px';
+    }
+
+
     const dialogConfig = {
       maxWidth: '100vw',
       width: '100vw',
-      height: isMobile ? 'calc(100vh - 160px)' : 'calc(100vh - 230px)', // Mobile: 80vh, PC: calc(100vh - 230px)
-      position: { top: isMobile ? '97px' : '180px' }, // Mobile: 100px from the top, PC: 180px from the top
+      height: dialogHeight,
+      position: { top: dialogTop },
       panelClass: 'content-full-screen-modal',
     };
 

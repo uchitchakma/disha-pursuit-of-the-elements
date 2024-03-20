@@ -40,6 +40,22 @@ export class Slide5SubComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(slideIndex: number): void {
+    const isMobile = window.innerWidth < 768; // Example mobile breakpoint
+    const isMonitor = window.innerHeight > 1000; // Example laptop condition
+
+    // Configure dialog settings based on the device
+    let dialogHeight = 'calc(100vh - 150px)'; // Default for desktop
+    let dialogTop = '180px'; // Default for desktop
+
+    if (isMobile) {
+      // Mobile configuration
+      dialogHeight = '90vh';
+      dialogTop = '97px';
+    } else if (isMonitor) {
+      // Laptop configuration
+      dialogHeight = 'calc(100vh - 230px)';
+      dialogTop = '180px';
+    }
     // Initiating the fade-out effect
     const h2Element = document.querySelector('.text-overlay h2');
     h2Element?.classList.add('fade-out');
@@ -48,9 +64,9 @@ export class Slide5SubComponent {
       // Opening the dialog with specified configuration inline
       const dialogRef = this.dialog.open(Slide5TowerComponent, {
         maxWidth: '100vw',
-        width: '100vw',
-        height: 'calc(100vh - 230px)', // Specified height
-        position: { top: '180px' }, // Specified position
+      width: '100vw',
+      height: dialogHeight,
+      position: { top: dialogTop }, // Specified position
         panelClass: 'content-full-screen-modal',
         data: { slideIndex } // Passing data to the dialog component
       });
