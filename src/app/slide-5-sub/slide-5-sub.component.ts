@@ -50,8 +50,8 @@ export class Slide5SubComponent {
     const isMonitor = window.innerHeight > 1000; // Example laptop condition
 
     // Configure dialog settings based on the device
-    let dialogHeight = 'calc(100vh - 150px)'; // Default for desktop
-    let dialogTop = '180px'; // Default for desktop
+    let dialogHeight = 'calc(100vh - 102px)'; // Default for desktop
+    let dialogTop = '102px'; // Default for desktop
 
     if (isMobile) {
       // Mobile configuration

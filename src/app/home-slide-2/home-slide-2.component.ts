@@ -15,8 +15,8 @@ export class HomeSlide2Component {
     const isMobile = window.innerWidth < 768; // Example mobile breakpoint
     const isMonitor = window.innerHeight > 1000; // Example laptop condition
 
-    let dialogHeight = 'calc(100vh - 150px)'; // Default for desktop
-    let dialogTop = '180px'; // Default for desktop
+    let dialogHeight = 'calc(100vh - 102px)'; // Default for desktop
+    let dialogTop = '102px'; // Default for desktop
 
     if (isMobile) {
       dialogHeight = '90vh';

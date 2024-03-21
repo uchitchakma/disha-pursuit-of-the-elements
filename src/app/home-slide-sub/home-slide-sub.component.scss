@@ -32,7 +32,7 @@
   .text-overlay {
     z-index: 4;
     width: 100%;
-    height: calc(100vh - 270px);
+    height: calc(100vh - 170px);
     display: flex;
     flex-direction: column;
     justify-content: space-around; // changed from space-around for consistent alignment
