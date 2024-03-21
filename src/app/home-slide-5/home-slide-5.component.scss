@@ -8,6 +8,16 @@ img{
 .body{
   display: flex;
 }
+.dialog-close-button-container {
+  position: relative;
+  z-index: 1050; /* Make sure it's above other content */
+  cursor: pointer;
+  font-size: 35px;
+  top: 7%;
+  transform: rotate(90deg); /* Rotates the arrow to point downwards */
+  /* Other styling properties */
+}
+
 h2{
   margin-bottom: 20px;
   width: 100%;
@@ -87,6 +97,28 @@ p{
     display: flex;
     flex-direction: column;
   }
+}
+@media screen and (max-height: 1000px) {
+  img{
+    width: 35%;
+  }
+  .lists{
+    line-height: 25px;
+  }
+  .custom-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns for list items */
+    gap: 0px 10px; /* Space between list items */
+    width: 100%; /* Full width */
+    margin: 10px 0px;
+    padding: 0; /* Remove padding */
+    list-style: none; /* Remove default list style */
+    counter-reset: item; /* Reset the list counter */
+  }
+  .dialog-close-button-container {
+    top: 2%;
+  }
+
 }
 
 @media (max-width: 780px) {

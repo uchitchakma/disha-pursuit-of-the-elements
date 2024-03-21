@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogRef } from '@angular/material/dialog';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { SlideFromBottomDirective } from '../slide-from-bottom.directive';
 import { Slide5TowerComponent } from '../slide-5-tower/slide-5-tower.component';
@@ -7,7 +9,7 @@ import { Slide5TowerComponent } from '../slide-5-tower/slide-5-tower.component';
 @Component({
   selector: 'app-slide-5-sub',
   standalone: true,
-  imports: [CommonModule, SlideFromBottomDirective],
+  imports: [CommonModule, SlideFromBottomDirective,  MatIconModule],
   templateUrl: './slide-5-sub.component.html',
   styleUrls: ['./slide-5-sub.component.scss'] // Corrected property name from 'styleUrl' to 'styleUrls'
 })
@@ -37,7 +39,11 @@ export class Slide5SubComponent {
     'SURFACE PARKING - 140',
   ];
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<Slide5SubComponent>) {}
+
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
 
   openDialog(slideIndex: number): void {
     const isMobile = window.innerWidth < 768; // Example mobile breakpoint
@@ -53,7 +59,7 @@ export class Slide5SubComponent {
       dialogTop = '97px';
     } else if (isMonitor) {
       // Laptop configuration
-      dialogHeight = 'calc(100vh - 230px)';
+      dialogHeight = 'calc(100vh - 180px)';
       dialogTop = '180px';
     }
     // Initiating the fade-out effect

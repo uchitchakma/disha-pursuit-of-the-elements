@@ -34,8 +34,14 @@
     display: flex;
     justify-content: center;
   }
-
 }
+  @media screen and (max-height: 1000px) {
+    p{
+      line-height: 25px;
+      font-size: 18px !important;
+    }
+    
+  }
 @media (max-width: 780px) {
     .content {
       width: 90%;

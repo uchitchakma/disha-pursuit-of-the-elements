@@ -1,8 +1,24 @@
 
 * {
   // animation: fadeInScale 1s ease-out forwards;
-
 }
+
+/* In your home-slide-sub.component.scss */
+
+/* Add to your home-slide-sub.component.scss */
+.dialog-close-button-container {
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: 25%; /* Adjust as needed */
+  z-index: 1050; /* Make sure it's above other content */
+  cursor: pointer;
+  font-size: 35px;
+  color: white;
+}
+
+
+
+
 .section{
   background-color: #F7F4ED;
 }
@@ -85,6 +101,16 @@
   img{
     float: right;
   }
+}
+
+@media screen and (max-height: 1000px) {
+  img{
+    width: 50% !important;
+  }
+  .section2, .section4{
+    .align-sub{
+   width: 80%;
+}}
 }
 
 @media (max-width: 780px) {

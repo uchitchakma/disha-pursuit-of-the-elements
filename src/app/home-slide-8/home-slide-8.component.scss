@@ -1,49 +1,51 @@
 .body {
   width: 100%;
-  max-width: 600px;
   margin: auto;
-  padding: 2rem;
+  padding: 5rem;
+  text-align: -webkit-center;
 }
 
 .head {
   text-align: center;
   margin-bottom: 2rem;
 }
-
-.contact-form {
-  display: grid;
-  gap: 1rem;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
 .contact-form .form-group {
+  position: relative;
+  padding-bottom: 10px; /* Space for the underline */
   display: flex;
-  flex-direction: column;
 }
 
 .contact-form .form-group label {
-  font-size: 0.9rem;
+  display: flex;
+  margin-bottom: .5rem;
   color: #333;
-  margin-bottom: 0.5rem;
+  font-size: .9rem;
+  width: 150px;
+  align-self: center;
+  font-weight: bold;
 }
 
+
+/* Style for all input fields */
 .contact-form .form-group input[type="text"],
 .contact-form .form-group input[type="email"],
 .contact-form .form-group input[type="tel"] {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  width: 80%;
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #000; /* Solid underline */
   font-size: 1rem;
+  margin-bottom: 1rem; /* Space below the input field */
+  background: transparent; /* No background */
 }
+
+
 
 .contact-form button {
   padding: 1rem;
   justify-self: center;
-  border: none;
   width: 150px;
-  background-color: #333;
-  color: #fff;
+  background-color: transparent;
+  color: black;
   cursor: pointer;
   border-radius: 4px;
   font-size: 1rem;
@@ -60,53 +62,56 @@
 
 .checkboxes {
   display: flex;
-  flex-direction: row !important; /* Changed to column for better mobile layout */
-  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row !important;
+  gap: 10px;
   margin: 15px 0;
-  p{
-    padding-right: 25px;
-  }
-}
-
-.checkboxes label {
-  display: block;
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  padding-left: 30px;
-  padding-right: 40px;
+  font-weight: bold;
+  align-items: center; /* Align the labels and checkboxes */
 }
 
 .checkboxes input[type="checkbox"] {
+  appearance: none; /* Hide the default checkbox appearance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
   position: absolute;
-  opacity: 0;
+  opacity: 0; /* Make the checkbox invisible */
+  width: 1em;
+  height: 1em;
+  margin: 0;
+}
+
+.checkboxes label {
+  position: relative;
+  padding-left: 25px; /* Space for custom checkbox appearance */
   cursor: pointer;
-  height: 0;
-  width: 0;
-  z-index: -1;
 }
 
 .checkboxes label::before {
-  content: "";
+  content: '';
+  display: block;
   position: absolute;
-  left: 0;
   top: 0;
-  height: 20px;
+  left: 0;
   width: 20px;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 2px; /* Add border-radius if you want rounded corners */
+  background: transparent;
+}
+
+.checkboxes input[type="checkbox"]:checked + label::before {
+  background: #2196F3; /* Change background color when checked */
+  border-color: #2196F3; /* Optional: Change border color when checked */
 }
 
 .checkboxes input[type="checkbox"]:checked + label::after {
-  content: "";
+  content: '✔'; /* Add a checkmark */
   position: absolute;
-  top: 3px;
-  left: 9px;
-  width: 6px;
-  height: 11px;
-  border: solid #2196F3;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+  top: -2px;
+  left: 4px;
+  color: white; /* Change the checkmark color to white */
+  font-size: 16px; /* Adjust the size of the checkmark */
 }
 
 @media (max-width: 780px) {

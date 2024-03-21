@@ -27,7 +27,7 @@ export class HomeSlide4Component {
       dialogTop = '97px';
     } else if (isMonitor) {
       // Laptop configuration
-      dialogHeight = 'calc(100vh - 230px)';
+      dialogHeight = 'calc(100vh - 180px)';
       dialogTop = '180px';
     }
 

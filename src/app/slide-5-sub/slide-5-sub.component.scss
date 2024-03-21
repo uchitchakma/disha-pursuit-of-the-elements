@@ -1,15 +1,27 @@
+.dialog-close-button-container {
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: 25%; /* Adjust as needed */
+  z-index: 1050; /* Make sure it's above other content */
+  cursor: pointer;
+  font-size: 35px;
+}
+
 .section{
   padding-bottom: 50px;
   background-color: #F7F4ED;
 }
+
 .content{
     background-color: white;
   }
 img{
-  width: 65%;
+  width: 50%;
 }
 .body{
   display: flex;
+  width: 90%;
+
 }
 h2{
   margin-bottom: 20px;
@@ -82,7 +94,10 @@ h2{
     }
   }
 }
-
+.section1{
+  .content{
+  height: calc(100vh - 270px);
+}}
 .section2{
   .top-div, .bottom-div{
     display: flex;

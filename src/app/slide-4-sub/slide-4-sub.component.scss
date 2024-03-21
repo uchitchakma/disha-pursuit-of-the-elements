@@ -2,6 +2,14 @@
 .content{
     height: calc(100vh - 270px);
 }
+.dialog-close-button-container {
+    position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: 25%; /* Adjust as needed */
+  z-index: 1050; /* Make sure it's above other content */
+  cursor: pointer;
+  font-size: 35px;
+  }
 .section{
     background-color: #F7F4ED;
 }

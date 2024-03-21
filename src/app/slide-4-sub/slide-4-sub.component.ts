@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogRef } from '@angular/material/dialog';
 import { SlideFromBottomDirective } from '../slide-from-bottom.directive';
 
 @Component({
   selector: 'app-slide-4-sub',
   standalone: true,
-  imports: [CommonModule, SlideFromBottomDirective],
+  imports: [CommonModule, SlideFromBottomDirective, MatIconModule],
   templateUrl: './slide-4-sub.component.html',
   styleUrl: './slide-4-sub.component.scss'
 })
@@ -22,4 +24,9 @@ export class Slide4SubComponent {
     { name: 'GYM', iconPath: '../../assets/icons/gym.svg' },
     { name: 'CAFE', iconPath: '../../assets/icons/cafe.svg' }
   ];
+  constructor(public dialogRef: MatDialogRef<Slide4SubComponent>) {}
+
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
 }

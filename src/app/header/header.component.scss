@@ -19,11 +19,12 @@
   .header {
     width: 100%;
     z-index: 10000;
+    
     position: relative;
     background: white;
   }
   img {
-    width: 100%;
+    width: 140px;
   }
   .logo {
     color: white;
@@ -75,7 +76,7 @@
       transition: color 0.3s ease;
       padding-right: 10px;
       cursor: pointer;
-      font-size: 22px;
+      font-size: 20px;
     }
     .navbar-item::after {
       content: "";
@@ -101,7 +102,9 @@
       cursor: pointer;
     }
   }
-  
+  .align1{
+    padding: 14px 0px;
+  }
   .navbar-close {
     width: 100%;
     text-align: center;

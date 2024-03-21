@@ -4,6 +4,8 @@ import { ScrollHorizontalDirective } from '../scroll-horizontal.directive';
 import { SharedService } from '../shared.service';
 import { SlideFromBottomDirective } from '../slide-from-bottom.directive';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Inject } from '@angular/core'; // Correct import for Inject
 
 
@@ -12,7 +14,8 @@ import { Inject } from '@angular/core'; // Correct import for Inject
   standalone: true,
   imports: [CommonModule,
             ScrollHorizontalDirective,
-            SlideFromBottomDirective],
+            SlideFromBottomDirective,
+            MatIconModule],
   templateUrl: './slide-5-tower.component.html',
   styleUrl: './slide-5-tower.component.scss'
 })
@@ -21,9 +24,12 @@ export class Slide5TowerComponent implements OnInit, AfterViewInit {
   slides = Array(4).fill(0).map((x, i) => i); // Representing your 4 slides
   activeSlideIndex = 0;
 
-  constructor(private cdr: ChangeDetectorRef, 
+  constructor(public dialogRef: MatDialogRef<Slide5TowerComponent>,private cdr: ChangeDetectorRef, 
     private sharedService: SharedService,
     @Inject(MAT_DIALOG_DATA) public data: any) {}
+    closeDialog(): void {
+      this.dialogRef.close();
+    }
 
 
   ngOnInit(): void {

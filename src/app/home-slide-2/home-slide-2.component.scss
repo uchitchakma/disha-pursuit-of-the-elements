@@ -25,6 +25,17 @@
   animation: fadeOut 0.5s ease-out forwards;
 }
 
+.dialog-close-button-container {
+  position: absolute;
+  bottom: 5%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  z-index: 1050; /* Make sure it's above other content */
+  cursor: pointer;
+  font-size: 35px;
+  color: white;
+  transform: rotate(90deg); /* Rotates the arrow to point downwards */
+  /* Other styling properties */
+}
 
 
 
@@ -86,8 +97,12 @@ p {
   }
 }
 @media screen and (max-height: 1000px) {
+  .dialog-close-button-container {
+    bottom: 0;
+  }
   p{
-    line-height: 27px;
+    line-height: 25px;
+    font-size: 18px;
   }
   @keyframes moveDown {
     to {

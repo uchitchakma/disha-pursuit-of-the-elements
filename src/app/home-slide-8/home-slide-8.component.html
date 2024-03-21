@@ -7,7 +7,7 @@
               (ngSubmit)="sendMessage($event)"
             >
               <div class="form-group">
-                <label for="name">Name*</label>
+                <label for="name">NAME</label>
                 <input
                   type="text"
                   id="name"
@@ -17,7 +17,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="email">Email*</label>
+                <label for="email">EMAIL</label>
                 <input
                   type="email"
                   id="email"
@@ -27,7 +27,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="phone">Phone number</label>
+                <label for="phone">MOBILE NO.</label>
                 <input
                   type="tel"
                   id="phone"
@@ -38,17 +38,16 @@
               </div>
               <div class="form-group checkboxes">
                 <p>I'M INTERESTED IN</p>
-                <label for="size_1200">
-                  <input type="checkbox" id="size_1200" name="size" value="1200" [(ngModel)]="size_1200"> 1200
-                </label>
-                
-                <label for="size_1500">
-                  <input type="checkbox" id="size_1500" name="size" value="1500" [(ngModel)]="size_1500"> 1500
-                </label>
-                <label for="size_1800">
-                  <input type="checkbox" id="size_1800" name="size" value="1800" [(ngModel)]="size_1800"> 1800
-                </label>
+                <input type="checkbox" id="size_1200" name="size_1200" [(ngModel)]="size_1200">
+                <label for="size_1200">1200</label>
+              
+                <input type="checkbox" id="size_1500" name="size_1500" [(ngModel)]="size_1500">
+                <label for="size_1500">1500</label>
+              
+                <input type="checkbox" id="size_1800" name="size_1800" [(ngModel)]="size_1800">
+                <label for="size_1800">1800</label>
               </div>
+              
               
               <button type="submit" [disabled]="isSendingEmail">
                 {{ isSendingEmail ? "Sending..." : "SUBMIT" }}
