@@ -37,7 +37,8 @@ h2{
   position: relative;
   z-index: 1050; /* Make sure it's above other content */
   cursor: pointer;
-  top: 40%;
+  top: 6%;
+  color: white;
   font-size: 35px;
   transform: rotate(90deg); /* Rotates the arrow to point downwards */
   /* Other styling properties */
@@ -55,6 +56,10 @@ h2{
 @media (max-width: 780px) {
   h2{
   font-size: 20px;
+  }
+  .dialog-close-button-container {
+
+    font-size: 20px;
   }
  
     .content {

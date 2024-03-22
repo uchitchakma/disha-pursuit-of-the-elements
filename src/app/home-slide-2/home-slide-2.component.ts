@@ -20,7 +20,7 @@ export class HomeSlide2Component {
 
     if (isMobile) {
       dialogHeight = '90vh';
-      dialogTop = '97px';
+      dialogTop = '75px';
     } else if (isMonitor) {
       dialogHeight = 'calc(100vh - 180px)';
       dialogTop = '180px';

@@ -114,14 +114,26 @@ p {
   }
 }
 @media (max-width: 780px) {
+  @keyframes moveDown {
+    to {
+      transform: translateY(20vh);
+    }
+  }
+  .move-down {
+    animation: moveDown 0.7s ease-out forwards;
+  }
+
   h2 {
     font-size: 20px;
     position: relative;
     bottom: 15px;
   }
+  .dialog-close-button-container {
+    font-size: 20px;
+  }
   p {
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 20px !important;
     width: 90%;
   }
   .text-overlay {

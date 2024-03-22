@@ -17,12 +17,12 @@
 }
 .dialog-close-button-container {
     position: absolute;
-  top: 5%; /* Adjust as needed */
-  left: 25%; /* Adjust as needed */
-  z-index: 1050; /* Make sure it's above other content */
-  cursor: pointer;
-  font-size: 35px;
-  color: white;
+    top: 5%; /* Adjust as needed */
+    left: 25%; /* Adjust as needed */
+    z-index: 1050; /* Make sure it's above other content */
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
   }
 .section{
     background-color: #F7F4ED;
@@ -69,8 +69,11 @@
 @media (max-width: 780px) {
     .content {
         width: 90%;
-        
+        height: calc(100vh - 250px);
       }
+    .section1{
+        padding-bottom: 50px;
+    }
     .items{
         gap: 15px;
         

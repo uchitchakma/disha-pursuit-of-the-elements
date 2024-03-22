@@ -100,28 +100,34 @@ p{
 }
 @media screen and (max-height: 1000px) {
   img{
-    width: 35%;
+    width: 60%;
   }
   .lists{
     line-height: 25px;
   }
   .custom-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create two columns for list items */
-    gap: 0px 10px; /* Space between list items */
+    display: grid; /* Keep using grid for consistent alignment */
+    grid-template-columns: 1fr; /* Only one column */
+    gap: 10px 0; /* Adjust space between list items vertically */
     width: 100%; /* Full width */
-    margin: 10px 0px;
+    margin: 10px 0; /* Margin on top and bottom */
     padding: 0; /* Remove padding */
     list-style: none; /* Remove default list style */
     counter-reset: item; /* Reset the list counter */
+    max-height: 450px; /* Fixed max height for the scrollable area */
+    overflow-y: auto; /* Add vertical scroll */
+    
   }
-  .dialog-close-button-container {
-    top: 2%;
-  }
-
 }
 
 @media (max-width: 780px) {
+  .dialog-close-button-container {
+    top: 3%;
+    font-size: 20px;
+  }
+  .lists{
+    text-align: -webkit-center;
+  }
   .content {
     overflow-y: auto;
     display: flex; /* Use flexbox to layout image and list side by side */
@@ -131,8 +137,7 @@ p{
   }
 
   img {
-    width: 10%; /* Full width */
-    margin-bottom: 10px; /* Adjust space below the image */
+    width: 60%; /* Full width */
     align-self: center;
   }
 
@@ -144,8 +149,9 @@ p{
   }
 
   p {
-    font-size: 14px; /* Adjust the paragraph font size as needed */
-    line-height: 1.4; /* Adjust line height for readability */
+    width: 90%;
+    font-size: 12px; /* Adjust the paragraph font size as needed */
+    line-height: 1; /* Adjust line height for readability */
     margin: 0 10px 10px; /* Add margin on the sides and more on the bottom */
   }
   
@@ -154,14 +160,17 @@ p{
   }
   
   .custom-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create two columns for list items */
-    gap: 0px 10px; /* Space between list items */
-    width: 100%; /* Full width */
-    margin: 10px 0px;
+    display: grid; /* Keep using grid for consistent alignment */
+    grid-template-columns: 1fr; /* Only one column */
+    gap: 5px 0; /* Adjust space between list items vertically */
+    width: 65%; /* Full width */
+    margin: 10px 0; /* Margin on top and bottom */
     padding: 0; /* Remove padding */
     list-style: none; /* Remove default list style */
     counter-reset: item; /* Reset the list counter */
+    max-height: 150px; /* Fixed max height for the scrollable area */
+    overflow-y: auto; /* Add vertical scroll */
+    
   }
 
   .custom-list li {
