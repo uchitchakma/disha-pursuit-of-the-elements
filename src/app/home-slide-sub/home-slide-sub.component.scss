@@ -17,7 +17,9 @@
 }
 
 
-
+.align-sub{
+  width: 65% !important;
+}
 
 .section{
   background-color: #F7F4ED;
@@ -30,7 +32,7 @@
 }
 .section1 {
   h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .text-overlay {
     z-index: 4;
@@ -105,10 +107,16 @@
     float: right;
   }
 }
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+h2{
+  font-size: 26px !important;
+}
+
+}
 
 @media screen and (max-height: 1000px) {
   img{
-    width: 50% !important;
+    width: 60% !important;
   }
   .section2, .section4{
     .align-sub{

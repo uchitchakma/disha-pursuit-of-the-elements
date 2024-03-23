@@ -41,9 +41,9 @@
 
 
 .contact-form button {
-  padding: 15px;
+  padding: 10px;
   justify-self: center;
-  width: 125px;
+  width: 100px;
   background-color: transparent;
   color: black;
   cursor: pointer;
@@ -113,7 +113,20 @@
   color: white; /* Change the checkmark color to white */
   font-size: 16px; /* Adjust the size of the checkmark */
 }
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+  h2{
+    font-size: 26px;
+    margin-bottom: 10px !important;
+  }
+  .contact-form .form-group{
+    padding-bottom: 5px !important;
+  }
+  .contact-form button
+  {
+    padding: 5px !important;
+  }
 
+}
 @media (max-width: 780px) {
   .checkboxes{
     display: block !important;

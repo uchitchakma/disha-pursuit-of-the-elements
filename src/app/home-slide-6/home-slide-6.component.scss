@@ -22,7 +22,17 @@
       width: 75%;
     }
 }
-
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+h2{
+  font-size: 26px;
+}
+p{
+  font-size: 16px !important;
+}
+img{
+  width: 180px;
+}
+}
 @media (max-width: 1030px) {
   .body{
     display: flex;
@@ -38,7 +48,11 @@
   @media screen and (max-height: 1000px) {
     p{
       line-height: 25px;
-      font-size: 18px !important;
+      font-size: 18px ;
+    }
+    .content {
+      display: flex;
+      justify-content: space-around !important;
     }
     
   }

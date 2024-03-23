@@ -59,7 +59,12 @@
 }
 
   
-  
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+img{
+    width: 80%;
+}
+
+}
 
 @media (max-width: 1350px) {
     .items{

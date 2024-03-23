@@ -52,7 +52,7 @@ h1, h2{
 .content {
   max-width: 1300px !important;
   background-color: #f2ede1;
-  height: -webkit-fill-available;
+  height: 100%;
   width: 90%;
   margin: auto;
   border-radius: 20px;
@@ -60,7 +60,6 @@ h1, h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   font-family: "Bai Jamjuree";
 }
 
@@ -122,7 +121,14 @@ h1, h2{
 }
 
 
-@media (max-width: 1000px) {
+@media (max-height: 1000px) {
+  .indicator{
+    height: 7px !important;
+    width: 7px !important;
+  }
+  .carousel-indicators{
+    bottom: 40px !important;
+  }
   .accordion-button {
     padding: 10px !important;
   }

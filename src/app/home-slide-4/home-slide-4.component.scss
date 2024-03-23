@@ -53,6 +53,11 @@ h2{
   animation: fadeOut 0.5s ease-out forwards;
 }
 
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+h2{
+  font-size: 26px;
+}
+}
 @media (max-width: 780px) {
   h2{
   font-size: 20px;

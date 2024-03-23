@@ -15,6 +15,9 @@
     height: 100%;
     justify-content: space-around;
   }
+  h2{
+    margin-bottom: 20px;
+  }
   p {
     line-height: 60px;
   }
@@ -40,6 +43,8 @@
   }
 
   .text-overlay {
+    position: relative;
+    top: 5%;
     width: 100%;
     height: 80%;
     display: flex;
@@ -86,7 +91,9 @@
       font-size: 24px;
       line-height: 75px;
     }
-    .btm{.txt{
+    .btm{
+      gap: 20px;
+      .txt{
       align-self: center;
     }
     }
@@ -101,14 +108,40 @@
     }
   }
 
-
-  @media screen and (max-height: 850px) {
+  @media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+    p{
+      line-height: 20px;
+    }
+    .top,
+    .btm{
+      p{
+        margin-bottom: 0 !important;
+      }
+    }
+    .text-overlay {
+      top: 0;
+    }
+    h2{
+      font-size: 26px;
+    }
     .left{
       .num{
-        font-size: 50px;
+        font-size: 40px !important;
+        margin-bottom: 0;
+      }
+  }
+  }
+  @media screen and (max-height: 1000px) {
+    .left{
+      .num{
+        font-size: 48px;
+        margin-bottom: 0;
+      }
+      .sec{
+        margin: 10px 20px !important;
       }
       .txt{
-        font-size: 22px;
+        font-size: 20px;
       }
       .top, .btm{
         margin: 0;

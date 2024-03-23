@@ -16,7 +16,18 @@
 }
  .content{
   gap: 22px;
+  overflow: hidden;
   max-width: 1300px !important;
+ } 
+
+ @media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){  
+  img{
+    width: 400px;
+  }
+  .head{
+    font-size: 30px;
+   
+  }
  } 
   
 @media (max-width: 1200px) {

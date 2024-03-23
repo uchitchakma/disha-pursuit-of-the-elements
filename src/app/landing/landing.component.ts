@@ -12,6 +12,8 @@ import { HomeSlide6Component } from '../home-slides';
 import { HomeSlide7Component } from '../home-slides';
 import { HomeSlide8Component } from '../home-slides';
 import { HomeSlide9Component } from '../home-slides';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
@@ -27,7 +29,9 @@ import { HomeSlide9Component } from '../home-slides';
     HomeSlide6Component,
     HomeSlide7Component,
     HomeSlide8Component,
-    HomeSlide9Component
+    HomeSlide9Component,
+    FooterComponent,
+    HeaderComponent
   ],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],

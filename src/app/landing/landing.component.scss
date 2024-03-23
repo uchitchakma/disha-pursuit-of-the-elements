@@ -7,15 +7,19 @@
   flex: 0 0 100%; // Ensure slides are full width but not more
  
   scroll-snap-stop: always;
-  overflow: hidden;
+  overflow: hidden !important;
   
 }
 .landing{
   background-color: #F7F4ED;
+  height: 100vh;
+    overflow-y: auto;
+
 }
+
 .carousel {
   display: flex;
-  height: 100%;
+  height: fit-content;
   flex-direction: row;
   overflow-x: auto; /* Explicitly allow horizontal scrolling */
   scroll-snap-type: x mandatory;
@@ -63,7 +67,11 @@
     width: 90%;
   }
 }
-
+@media screen and (max-height: 1000px) {
+  .slide{
+    min-height: 400px;
+  }
+}
 @media (max-width: 780px) {
   .content {
     width: 90%;

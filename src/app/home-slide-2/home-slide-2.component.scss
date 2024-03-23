@@ -77,7 +77,9 @@ img {
   box-sizing: border-box; // Ensures padding does not affect width
   gap: 40px;
 }
-
+h2{
+  font-size: 30px;
+}
 p {
   width: 75%;
   line-height: 35px;
@@ -86,6 +88,17 @@ p {
 .mobile-text{
   display: none;
 }
+
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+h2{
+  font-size: 26px;
+}
+p {
+  font-size: 16px !important;
+  line-height: 25px !important;
+}
+}
+
 @media (min-width: 1000px) {
   @keyframes moveDown {
     to {
@@ -99,6 +112,7 @@ p {
 @media screen and (max-height: 1000px) {
   .dialog-close-button-container {
     bottom: 0;
+ 
   }
   p{
     line-height: 25px;
@@ -106,7 +120,7 @@ p {
   }
   @keyframes moveDown {
     to {
-      transform: translateY(16vh);
+      transform: translateY(18vh);
     }
   }
   .move-down {

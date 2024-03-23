@@ -169,7 +169,16 @@ h2{
   }
   
 }
-
+@media (max-height: 1000px) {
+  .lists{
+    line-height: 23px;
+  }
+  .section2{
+    .tile {
+      width: 40%;
+      height: 270px;
+  }
+}}
 @media (max-width: 780px) {
   .body{
     display: flex;
