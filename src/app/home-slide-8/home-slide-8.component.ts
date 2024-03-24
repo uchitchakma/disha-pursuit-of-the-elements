@@ -47,6 +47,9 @@ export class HomeSlide8Component {
       user_name: this.user_name,
       user_email: this.user_email,
       user_phone: this.user_phone,
+      size_1200: this.size_1200 ? "Yes" : "No", // Include whether the user is interested in size 1200
+      size_1500: this.size_1500 ? "Yes" : "No", // Include whether the user is interested in size 1500
+      size_1800: this.size_1800 ? "Yes" : "No", // Include whether the user is interested in size 1800
     };
 
     emailjs
@@ -66,7 +69,7 @@ export class HomeSlide8Component {
       .finally(() => {
         this.isSendingEmail = false; // Reset the email sending state
       });
-  }
+}
 }
 
 
