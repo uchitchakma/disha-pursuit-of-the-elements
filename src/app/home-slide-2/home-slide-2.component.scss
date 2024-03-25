@@ -97,12 +97,15 @@ p {
   font-size: 16px !important;
   line-height: 25px !important;
 }
+.dialog-close-button-container{
+  bottom: -2% !important;
+}
 }
 
-@media (min-width: 1000px) {
+@media (min-height: 1000px) {
   @keyframes moveDown {
     to {
-      transform: translateY(calc(50vh - 420px));
+      transform: translateY(calc(50vh - 400px));
     }
   }
   .move-down {

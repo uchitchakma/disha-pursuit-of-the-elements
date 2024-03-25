@@ -80,6 +80,16 @@ h2{
   
 }
 }
+@media (min-height: 1200px){
+  h2{
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (max-height: 1000px) {
   h2{
     margin-top: 6% !important;
@@ -89,6 +99,10 @@ h2{
   }
 }
 @media (max-width: 780px) {
+  .body {
+    grid-template-columns: 1fr; /* Change to single column for mobile */
+    gap: 10px;
+  }
   h2{
     font-size: 20px;
   }

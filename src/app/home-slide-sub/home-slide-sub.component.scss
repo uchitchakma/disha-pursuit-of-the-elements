@@ -1,7 +1,4 @@
 
-* {
-  // animation: fadeInScale 1s ease-out forwards;
-}
 
 /* In your home-slide-sub.component.scss */
 
@@ -127,10 +124,14 @@ h2{
 @media (max-width: 780px) {
   .content {
     width: 90%;
-
-    
+  }
+  .align-sub{
+    width: 90% !important;
   }
   .section1 {
+    h2{
+      font-size: 20px;
+    }
     .text-overlay {
       height: calc(100vh - 250px);
 
@@ -139,7 +140,7 @@ h2{
   .section4 {
     img {
       margin-bottom: 20px;
-      width: 70%;
+      width: 70% !important;
     }
     .align-sub {
       display: flex;

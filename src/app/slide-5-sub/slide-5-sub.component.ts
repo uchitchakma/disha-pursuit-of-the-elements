@@ -59,8 +59,8 @@ export class Slide5SubComponent {
       dialogTop = '97px';
     } else if (isMonitor) {
       // Laptop configuration
-      dialogHeight = 'calc(100vh - 180px)';
-      dialogTop = '180px';
+      dialogHeight = '92vh';
+      dialogTop = '102px';
     }
     // Initiating the fade-out effect
     const h2Element = document.querySelector('.text-overlay h2');

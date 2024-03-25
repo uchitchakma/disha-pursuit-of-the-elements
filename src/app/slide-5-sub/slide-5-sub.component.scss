@@ -169,6 +169,27 @@ h2{
   }
   
 }
+@media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+.content{
+  overflow: auto;
+  display: block;
+  
+}
+img{
+  position: relative;
+  bottom: 15px;
+  width: 55%;
+}
+.section2{
+  .tile {
+    width: 35% !important;
+    height: 205px !important;
+    h3{
+      font-size: 26px;
+    }
+}
+}
+}
 @media (max-height: 1000px) {
   .lists{
     line-height: 23px;
