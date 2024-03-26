@@ -21,7 +21,7 @@
   .carousel-indicators {
     text-align: center;
     position: relative;
-    bottom: 50px;
+    bottom: 75px !important;
     z-index: 10;
   }
   
@@ -84,4 +84,27 @@
       width: 90%;
       
     }
+    .carousel-indicators{
+      bottom: 100px !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .dialog-close-button-container{
+      top: 2%;
+      left: 12%;
+      font-size: 20px;
+    }
+    .right-arrow, .left-arrow{
+      display: none;
+    }
+  //   .right-arrow {
+  //     right: 15px;
+  //     top: 44%;
+  //     font-size: 25px;
+  // }
+  // .left-arrow{
+  //   left: 15px;
+  //   top: 44%;
+  //   font-size: 25px;
+  // }
   }

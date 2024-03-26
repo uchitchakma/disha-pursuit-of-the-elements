@@ -233,4 +233,9 @@ top: 3%;
 
   /* Additional icon adjustments... */
 }
+@media (max-width: 780px) {
+  .dialog-close-button-container {
+    top: 5%;
+  }
+}
 

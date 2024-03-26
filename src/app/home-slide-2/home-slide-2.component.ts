@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HomeSlideSubComponent } from '../home-slide-sub/home-slide-sub.component';
 
@@ -6,7 +6,8 @@ import { HomeSlideSubComponent } from '../home-slide-sub/home-slide-sub.componen
   selector: 'app-home-slide-2',
   standalone: true,
   templateUrl: './home-slide-2.component.html',
-  styleUrls: ['./home-slide-2.component.scss']
+  styleUrls: ['./home-slide-2.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeSlide2Component {
   constructor(public dialog: MatDialog) {}

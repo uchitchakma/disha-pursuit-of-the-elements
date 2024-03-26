@@ -62,32 +62,39 @@
 
 .checkboxes {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row !important;
   gap: 10px;
   margin: 15px 0;
   font-weight: bold;
   align-items: center; /* Align the labels and checkboxes */
 }
-
-.checkboxes input[type="checkbox"] {
-  appearance: none; /* Hide the default checkbox appearance */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  position: absolute;
-  opacity: 0; /* Make the checkbox invisible */
-  width: 1em;
-  height: 1em;
-  margin: 0;
+.options{
+  display: flex;
 }
-
 .checkboxes label {
   position: relative;
   padding-left: 25px; /* Space for custom checkbox appearance */
   cursor: pointer;
+  display: inline-block; /* Added to allow proper spacing */
+  margin-right: 10px; /* Space between the checkbox labels */
 }
 
+.checkboxes input[type="checkbox"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1; /* Ensures the input is not overlapping other clickable areas */
+}
+
+
 .checkboxes label::before {
+  cursor: pointer;
   content: '';
   display: block;
   position: absolute;
@@ -133,9 +140,11 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1000px) {
   .checkboxes{
-    display: block !important;
+    display: flex;
+    flex-direction: column !important;
+    gap: 30px;
   }
   .contact-form {
     padding: 1rem;
@@ -145,6 +154,9 @@
   .contact-form button {
     padding: 10px;
     width: 100px;
+  }
+  .options{
+    justify-content: center;
   }
 
 
@@ -167,4 +179,21 @@
   .content {
     width: 90%;
   }
+}
+@media (max-width: 480px) {
+  .checkboxes{
+    gap: 20px;
+  }
+  .options{
+    width: 90%;
+}
+.contact-form .form-group input[type="text"],
+.contact-form .form-group input[type="email"],
+.contact-form .form-group input[type="tel"] {
+  margin-bottom: 5px;
+}
+.contact-form button{
+  padding: 5px;
+  width: 90px;
+}
 }

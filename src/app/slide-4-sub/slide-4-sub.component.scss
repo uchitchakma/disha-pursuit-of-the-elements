@@ -72,6 +72,10 @@ img{
     }
 }
 @media (max-width: 780px) {
+    .section{
+        height: auto;
+        padding-bottom: 50px ;
+    }
     .content {
         width: 90%;
         height: calc(100vh - 250px);
@@ -106,3 +110,10 @@ img{
     }
 
 }
+@media (max-width: 480px) {
+    .dialog-close-button-container{
+      top: 2%;
+      left: 12%;
+      font-size: 20px;
+    }
+  }

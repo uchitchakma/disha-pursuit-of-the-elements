@@ -56,7 +56,7 @@ export class Slide5SubComponent {
     if (isMobile) {
       // Mobile configuration
       dialogHeight = '90vh';
-      dialogTop = '97px';
+      dialogTop = '75px';
     } else if (isMonitor) {
       // Laptop configuration
       dialogHeight = '92vh';

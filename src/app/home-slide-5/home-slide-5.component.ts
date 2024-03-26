@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Slide5SubComponent } from '../slide-5-sub/slide-5-sub.component';
 
@@ -8,7 +8,8 @@ import { Slide5SubComponent } from '../slide-5-sub/slide-5-sub.component';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home-slide-5.component.html',
-  styleUrls: ['./home-slide-5.component.scss']
+  styleUrls: ['./home-slide-5.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeSlide5Component {
   listItems = [

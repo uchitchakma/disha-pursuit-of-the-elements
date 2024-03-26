@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Slide4SubComponent } from '../slide-4-sub/slide-4-sub.component';
 
@@ -7,7 +7,8 @@ import { Slide4SubComponent } from '../slide-4-sub/slide-4-sub.component';
   standalone: true,
   imports: [],
   templateUrl: './home-slide-4.component.html',
-  styleUrls: ['./home-slide-4.component.scss'] // Note the correction here from 'styleUrl' to 'styleUrls'
+  styleUrls: ['./home-slide-4.component.scss'], // Note the correction here from 'styleUrl' to 'styleUrls'
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class HomeSlide4Component {
   constructor(public dialog: MatDialog) {}

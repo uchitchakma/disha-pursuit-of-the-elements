@@ -201,6 +201,9 @@ img{
   }
 }}
 @media (max-width: 780px) {
+  .section{
+    height: auto;
+  }
   .body{
     display: flex;
     flex-direction: column;
@@ -210,7 +213,101 @@ img{
     flex-wrap: wrap;
   }
   .content {
+    overflow-y: auto;
+    height: calc(100vh - 250px) !important;
+    display: flex; /* Use flexbox to layout image and list side by side */
+    flex-direction: column; /* Stack them vertically on mobile */
+    align-items: center; /* Center items horizontally */
     width: 90%;
+  }
+
+  img {
+    width: 60%; /* Full width */
+    align-self: center;
+  }
+
+  h2 {
+    font-size: 18px; /* Adjust the font size as needed */
+    width: 100%;
+    text-align: center;
+    padding: 0 10px; /* Add padding on the sides */
+  }
+
+  p {
+    width: 90%;
+    font-size: 12px; /* Adjust the paragraph font size as needed */
+    line-height: 1; /* Adjust line height for readability */
+    margin: 0 10px 10px; /* Add margin on the sides and more on the bottom */
+  }
+  
+  .body {
+    width: 100%; /* Set width to full to handle the flex child sizing correctly */
+  }
+  .lists{
+    text-align: -webkit-center;
+  }
+  
+  .custom-list {
+    display: grid; /* Keep using grid for consistent alignment */
+    grid-template-columns: 1fr; /* Only one column */
+    gap: 5px 0; /* Adjust space between list items vertically */
+    width: 65%; /* Full width */
+    margin: 10px 0; /* Margin on top and bottom */
+    padding: 0; /* Remove padding */
+    list-style: none; /* Remove default list style */
+    counter-reset: item; /* Reset the list counter */
+    max-height: 250px; /* Fixed max height for the scrollable area */
+    overflow-y: auto; /* Add vertical scroll */
     
+  }
+
+  .custom-list li {
+    display: flex; /* Use flexbox for list item layout */
+    align-items: center; /* Align the counter and text vertically */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .custom-list li::before {
+    content: counter(item); /* Display the counter */
+    counter-increment: item; /* Increment the counter */
+    min-width: 16px; /* Adjust the width of the circle */
+    height: 16px; /* Adjust the height of the circle */
+    margin-right: 5px; /* Space between the circle and text */
+    background-color: #4a709d; /* Background color of the circle */
+    color: white; /* Color of the number */
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    border-radius: 50%; /* Round the corners for a circle shape */
+    font-size: 10px; /* Smaller font size for the numbers */
+    padding: 2px; /* Adjust padding as needed */
+  }
+  .section2{
+    .align-sub{
+      gap: 20px;
+    }
+    .tile {
+      width: 160px;
+      height: 190px;
+      padding: 5px;
+      text-align: unset;
+      h3{
+        font-size: 16px;
+        text-align: center;
+      }
+      li{
+        font-size: 12px;
+      }
+  }
+  .top-div, .bottom-div{
+    width: 100%;
+    gap: 20px;
+}
+}}
+@media (max-width: 480px) {
+  .dialog-close-button-container{
+    top: 2%;
+    left: 12%;
+    font-size: 20px;
   }
 }
