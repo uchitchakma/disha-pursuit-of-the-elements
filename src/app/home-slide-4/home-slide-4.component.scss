@@ -54,7 +54,11 @@ h2{
   animation: fadeOut 0.5s ease-out forwards;
 }
 
-
+.arrow{
+  width: 35px;
+  z-index: 5;
+  cursor: pointer;
+}
 
 @media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
 h2{

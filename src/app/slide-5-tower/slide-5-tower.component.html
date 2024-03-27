@@ -1,8 +1,15 @@
-<div class="dialog-close-button-container"(click)="closeDialog()">&#10094;</div>
+<div class="nav-arrow left-arrow2" >
+    <img src="../../assets/icons/Vector4.svg" class="arrow" class="arrow" (click)="closeDialog()" alt="">
+</div>
 
-<div class="nav-arrow left-arrow" (click)="scrollTo('prev')">&#10094;</div>
+<div class="nav-arrow left-arrow" >
+    <img src="../../assets/icons/Vector4.svg" class="arrow" (click)="scrollTo('prev')">
+</div>
+
 <div class="carousel carousel2" #carousel (scroll)="onScroll()">
+
     <div class="slide">
+
         <div class="content">
             <img src="../../assets/images/premium.svg" alt="">
         </div>
@@ -23,7 +30,9 @@
         </div>
     </div>
 </div>
-<div class="nav-arrow right-arrow" (click)="scrollTo('next')">&#10095;</div>
+<div class="nav-arrow right-arrow" >
+    <img src="../../assets/icons/Vector5.svg" class="arrow" (click)="scrollTo('next')">
+</div>
 <div class="carousel-indicators">
     <span class="indicator" *ngFor="let slide of slides; let i = index" 
           [ngClass]="{'active': i === activeSlideIndex, 

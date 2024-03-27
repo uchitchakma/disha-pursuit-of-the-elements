@@ -10,6 +10,14 @@
     overflow: hidden;
     
   }
+  .arrow{
+    width: 30px !important;
+    z-index: 5;
+    cursor: pointer;
+    position: relative;
+    left: 25%;
+    bottom: 38%;
+  }
   .indicator.active {
     background-color: #1f1c1c; // Active color
   }
@@ -70,6 +78,11 @@
   .left-arrow {
     left: 30px;
     top: 50%;
+    color: #434e50;
+  }
+  .left-arrow2{
+    left: 25%;
+    top: 10%;
     color: #434e50;
   }
   

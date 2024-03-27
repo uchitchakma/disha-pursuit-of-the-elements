@@ -12,7 +12,14 @@
   background-color: #F7F4ED;
   height: 100vh;
 }
-
+.arrow{
+  width: 35px !important;
+  z-index: 5;
+  cursor: pointer;
+  position: relative;
+  left: 25%;
+  bottom: 38%;
+}
 .content{
 
     background-color: white;
@@ -222,6 +229,9 @@ img{
 
   .section{
     height: auto;
+  }
+  .arrow{
+    width: 20px !important;
   }
   .body{
     display: flex;
