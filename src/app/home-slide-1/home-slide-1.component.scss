@@ -30,23 +30,7 @@
   }
  } 
   
-@media (max-width: 1200px) {
-
-    img {
-      width: 550px;
-    }
-  }
-  .content {
-    width: 90%;
-  }
-
-  @media screen and (max-height: 850px) {
-    .content {
-      width: 65%;
-    }
-
-  }
-@media (max-width: 780px) {
+@media (max-width: 980px) {
   .content {
     width: 90%;
     

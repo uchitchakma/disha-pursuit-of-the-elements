@@ -131,24 +131,37 @@ h2{
 }}
 }
 
-@media (max-width: 780px) {
+@media (max-width: 980px) {
   .section{
     height: auto;
   }
   .content {
     width: 90%;
   }
+  .dialog-close-button-container {
+    font-size: 20px;
+    left: 10%;
+  }
   .align-sub{
     width: 90% !important;
   }
   .section1 {
     h2{
-      font-size: 20px;
+      font-size: 20px  !important;
     }
-    .text-overlay {
-      height: calc(100vh - 250px);
+    
+  
+  .section3{
+    p{
+    width: 100%;
+  }
+}}
 
-    }}
+@media (max-width: 480px) {
+  .text-overlay {
+    height: calc(100vh - 250px) !important;
+
+  }
   .section2,
   .section4 {
     img {
@@ -168,16 +181,10 @@ h2{
       align-items: center;
     }
   }
-  .section3{
-    p{
-    width: 100%;
-  }
-}}
-
-@media (max-width: 480px) {
   .dialog-close-button-container{
     top: 2%;
     left: 12%;
     font-size: 20px;
   }
+}
 }

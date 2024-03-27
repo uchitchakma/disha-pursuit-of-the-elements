@@ -10,17 +10,23 @@
 .section{
   padding-bottom: 50px;
   background-color: #F7F4ED;
+  height: 100vh;
 }
 
 .content{
+
     background-color: white;
+    height: fit-content !important;
+    
   }
 img{
-  width: 60%;
+  width: 50%;
+  height: 95%;
 }
 .body{
+  padding-top: 10%;
   display: flex;
-  width: 90%;
+  width: 100%;
 
 }
 h2{
@@ -61,6 +67,7 @@ h2{
       position: absolute;
       left: 0;
       top: 0;
+      background-color: transparent;
       width: 16px;
       height: 16px;
     }
@@ -170,15 +177,23 @@ h2{
   
 }
 @media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
+  .section{
+    height: 120vh;
+  }
 .content{
-  overflow: auto;
   display: block;
-  
+  height: 110vh !important;
+}
+.body{
+  width: 90%;
+}
+.lists{
+  padding-top: 12%;
 }
 img{
   position: relative;
-  bottom: 15px;
-  width: 55%;
+  padding-top: 12%;
+  width: 50%;
 }
 .section2{
   .tile {
@@ -190,9 +205,12 @@ img{
 }
 }
 }
-@media (max-height: 1000px) {
+@media (max-width: 1100px) {
+ 
+
   .lists{
     line-height: 23px;
+    padding-top: 0;
   }
   .section2{
     .tile {
@@ -200,21 +218,20 @@ img{
       height: 270px;
   }
 }}
-@media (max-width: 780px) {
+@media (max-width: 980px) {
+
   .section{
     height: auto;
   }
   .body{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 12%;
   }
-  .custom-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
+ 
   .content {
-    overflow-y: auto;
-    height: calc(100vh - 250px) !important;
+
     display: flex; /* Use flexbox to layout image and list side by side */
     flex-direction: column; /* Stack them vertically on mobile */
     align-items: center; /* Center items horizontally */
@@ -245,20 +262,12 @@ img{
   }
   .lists{
     text-align: -webkit-center;
+    width: 75%;
+    
   }
   
   .custom-list {
-    display: grid; /* Keep using grid for consistent alignment */
-    grid-template-columns: 1fr; /* Only one column */
-    gap: 5px 0; /* Adjust space between list items vertically */
-    width: 65%; /* Full width */
-    margin: 10px 0; /* Margin on top and bottom */
-    padding: 0; /* Remove padding */
-    list-style: none; /* Remove default list style */
-    counter-reset: item; /* Reset the list counter */
-    max-height: 250px; /* Fixed max height for the scrollable area */
-    overflow-y: auto; /* Add vertical scroll */
-    
+
   }
 
   .custom-list li {
@@ -267,21 +276,6 @@ img{
     font-size: 12px; /* Smaller font size for mobile */
   }
 
-  .custom-list li::before {
-    content: counter(item); /* Display the counter */
-    counter-increment: item; /* Increment the counter */
-    min-width: 16px; /* Adjust the width of the circle */
-    height: 16px; /* Adjust the height of the circle */
-    margin-right: 5px; /* Space between the circle and text */
-    background-color: #4a709d; /* Background color of the circle */
-    color: white; /* Color of the number */
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: center; /* Center the content horizontally */
-    border-radius: 50%; /* Round the corners for a circle shape */
-    font-size: 10px; /* Smaller font size for the numbers */
-    padding: 2px; /* Adjust padding as needed */
-  }
   .section2{
     .align-sub{
       gap: 20px;
@@ -305,9 +299,24 @@ img{
 }
 }}
 @media (max-width: 480px) {
+  .section{
+    height: fit-content;
+  }
+  .content{
+    justify-content: flex-start;
+  
+  }
+  .lists{
+    padding: 0;
+    width: 95%;
+  }
+
   .dialog-close-button-container{
     top: 2%;
     left: 12%;
     font-size: 20px;
+  }
+  .body{
+    padding-top: 15%;
   }
 }

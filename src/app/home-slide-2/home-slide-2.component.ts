@@ -34,7 +34,7 @@ export class HomeSlide2Component {
   
   private getDialogConfig(): any {
     // This method abstracts the dialog configuration to reduce duplication
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 500;
     const isMonitor = window.innerHeight > 1000;
     let dialogHeight = 'calc(100vh - 102px)';
     let dialogTop = '102px';

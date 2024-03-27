@@ -159,9 +159,6 @@
       width: 100%;
       right: 0; /* Slide in to cover the left part of the screen */
     }
-    img {
-      width: 250px ;
-    }
   
   
     .navbar-toggler {
@@ -171,13 +168,11 @@
     .header{
       padding: 0px;
     }
-    .navbar{
-      margin-bottom: 20px;
-    }
+
     
   }
 
-  @media (max-width: 780px) 
+  @media (max-width: 480px) 
   {
     img{
       width: 60%;
