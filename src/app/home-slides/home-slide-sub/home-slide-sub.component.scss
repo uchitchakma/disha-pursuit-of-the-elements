@@ -13,12 +13,12 @@
   color: white;
 }
 .arrow{
-  width: 35px !important;
-  z-index: 5;
+  width: 30px !important;
+  z-index: 10;
   cursor: pointer;
-  position: relative;
-  left: 25%;
-  bottom: 38%;
+  position: absolute;
+  left: 22%;
+  top: 7%;
 }
 
 
@@ -55,7 +55,7 @@
     gap: 40px;
   }
 .content {
-  background-image: url("../../assets/images/about.png");
+  background-image: url("../../../assets/images/about.png");
   background-size: cover;
   overflow: hidden;
   position: relative; /* Ensure this container is positioned to act as the anchor for the absolutely positioned ::before */
@@ -128,7 +128,11 @@ h2{
 }
 
 }
-
+@media screen and (min-height: 1000px) {
+  .arrow{
+    left: 28%;
+  }
+}
 @media screen and (max-width: 1200px) {
   img{
     width: 60% !important;
@@ -145,9 +149,6 @@ h2{
   }
   .content {
     width: 90%;
-  }
-  .arrow{
-    width: 20px !important;
   }
   .align-sub{
     width: 90% !important;
@@ -167,7 +168,10 @@ h2{
 @media (max-width: 480px) {
   .text-overlay {
     height: calc(100vh - 250px) !important;
-
+  }
+  .arrow{
+    width: 20px !important;
+    left: 15%;
   }
   .section2,
   .section4 {

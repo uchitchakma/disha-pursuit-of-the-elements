@@ -1,6 +1,6 @@
 .content {
   position: relative;
-  background-image: url("../../assets/images/about.png");
+  background-image: url("../../../assets/images/about.png");
   background-size: cover;
   overflow: hidden;
   &::before {
@@ -19,11 +19,22 @@
   }
 }
 
-.arrow{
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the pixel value to control the height of the movement */
+  }
+}
+
+.arrow {
   width: 35px;
   z-index: 5;
   cursor: pointer;
+  animation: upAndDown 2s ease-in-out infinite; /* Apply the animation */
 }
+
 
 .fade-out {
   animation: fadeOut 0.5s ease-out forwards;
@@ -106,10 +117,11 @@ p {
 }
 }
 
-@media (min-height: 1000px) {
+@media screen and (min-height: 1000px) {
+
   @keyframes moveDown {
     to {
-      transform: translateY(calc(50vh - 400px));
+      transform: translateY(calc(50vh - 390px));
     }
   }
   .move-down {
@@ -127,7 +139,7 @@ p {
   }
   @keyframes moveDown {
     to {
-      transform: translateY(18vh);
+      transform: translateY(19.5vh);
     }
   }
   .move-down {
@@ -172,4 +184,9 @@ p {
       width: 90%;
       
     }
+}
+@media (max-width: 480px){
+  .arrow{
+    width: 20px !important;
+  }
 }

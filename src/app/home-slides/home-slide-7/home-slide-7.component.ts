@@ -1,7 +1,7 @@
 import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { AccordionComponent } from '../accordion/accordion.component';
+import { AccordionComponent } from '../../accordion/accordion.component';
 
 @Component({
   selector: 'app-home-slide-7',

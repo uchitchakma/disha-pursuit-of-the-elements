@@ -50,7 +50,7 @@ export class Slide5SubComponent {
     const isMonitor = window.innerHeight > 1000; // Example laptop condition
 
     // Configure dialog settings based on the device
-    let dialogHeight = 'calc(100vh - 102px)'; // Default for desktop
+    let dialogHeight = 'calc(100vh - 85px)'; // Default for desktop
     let dialogTop = '102px'; // Default for desktop
 
     if (isMobile) {
@@ -59,7 +59,7 @@ export class Slide5SubComponent {
       dialogTop = '75px';
     } else if (isMonitor) {
       // Laptop configuration
-      dialogHeight = '92vh';
+      dialogHeight = '94vh';
       dialogTop = '102px';
     }
     // Initiating the fade-out effect

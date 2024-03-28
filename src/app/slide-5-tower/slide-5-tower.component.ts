@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef, ChangeDetectorRef, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollHorizontalDirective } from '../scroll-horizontal.directive';
-import { SharedService } from '../shared.service';
 import { SlideFromBottomDirective } from '../slide-from-bottom.directive';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,17 +24,14 @@ export class Slide5TowerComponent implements OnInit, AfterViewInit {
   activeSlideIndex = 0;
 
   constructor(public dialogRef: MatDialogRef<Slide5TowerComponent>,private cdr: ChangeDetectorRef, 
-    private sharedService: SharedService,
     @Inject(MAT_DIALOG_DATA) public data: any) {}
     closeDialog(): void {
-      this.dialogRef.close();
+      this.dialogRef.close(true);
     }
 
 
   ngOnInit(): void {
-    this.sharedService.scrollToSlideEvent.subscribe((index: number) => {
-      this.goToSlide(index);
-    });
+
     if (this.data?.slideIndex !== undefined) {
       this.goToSlide(this.data.slideIndex);
     }

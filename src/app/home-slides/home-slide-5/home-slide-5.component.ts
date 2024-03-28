@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Slide5SubComponent } from '../slide-5-sub/slide-5-sub.component';
+import { Slide5SubComponent } from '../../slide-5-sub/slide-5-sub.component';
 
 @Component({
   selector: 'app-home-slide-5',

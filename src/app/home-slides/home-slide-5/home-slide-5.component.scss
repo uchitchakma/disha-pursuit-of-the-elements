@@ -17,10 +17,20 @@ img{
   animation: fadeOut 0.5s ease-out forwards;
 }
 
-.arrow{
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the pixel value to control the height of the movement */
+  }
+}
+
+.arrow {
   width: 35px;
   z-index: 5;
   cursor: pointer;
+  animation: upAndDown 2s ease-in-out infinite; /* Apply the animation */
 }
 
 .body{
@@ -79,7 +89,7 @@ p{
       font-size: 14px;
     }
     &:nth-child(16)::before {
-      content: url("../../assets/icons/star.svg"); // Path to your icon image
+      content: url("../../../assets/icons/star.svg"); // Path to your icon image
       position: absolute;
       left: 0;
       top: 0;
@@ -218,21 +228,6 @@ top: 3%;
     font-size: 12px; /* Smaller font size for mobile */
   }
 
-  .custom-list li::before {
-    content: counter(item); /* Display the counter */
-    counter-increment: item; /* Increment the counter */
-    min-width: 16px; /* Adjust the width of the circle */
-    height: 16px; /* Adjust the height of the circle */
-    margin-right: 5px; /* Space between the circle and text */
-    background-color: #4a709d; /* Background color of the circle */
-    color: white; /* Color of the number */
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: center; /* Center the content horizontally */
-    border-radius: 50%; /* Round the corners for a circle shape */
-    font-size: 10px; /* Smaller font size for the numbers */
-    padding: 2px; /* Adjust padding as needed */
-  }
   .content {
     overflow-y: auto;
     display: flex; /* Use flexbox to layout image and list side by side */
@@ -252,6 +247,9 @@ top: 3%;
 @media (max-width: 480px) {
 .lists{
   width: 95%;
+}
+.arrow{
+  width: 20px !important;
 }
 
 }

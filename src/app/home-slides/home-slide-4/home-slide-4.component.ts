@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Slide4SubComponent } from '../slide-4-sub/slide-4-sub.component';
+import { Slide4SubComponent } from '../../slide-4-sub/slide-4-sub.component';
 
 @Component({
   selector: 'app-home-slide-4',

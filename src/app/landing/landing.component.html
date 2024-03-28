@@ -1,3 +1,6 @@
+<div class="nav-arrow left-arrow" >
+  <img src="../../assets/icons/Vector4.svg" class="arrow" (click)="scrollTo('prev')">
+</div>
 <main class="landing">
   <app-header />
   <div class="carousel" #carousel (scroll)="onScroll()">
@@ -29,6 +32,9 @@
       <app-home-slide-8></app-home-slide-8>
     </div>
   </div>
+  <div class="nav-arrow right-arrow" >
+    <img src="../../assets/icons/Vector5.svg" class="arrow" (click)="scrollTo('next')">
+</div>
   <div class="carousel-indicators">
     <span class="indicator" *ngFor="let slide of slides; let i = index" 
           [ngClass]="{'active': i === activeSlideIndex, 

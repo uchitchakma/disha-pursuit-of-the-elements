@@ -6,7 +6,7 @@ h2{
 .content {
   cursor: pointer;
   position: relative;
-  background-image: url("../../assets/images/amenties.png");
+  background-image: url("../../../assets/images/amenties.png");
   background-size: cover;
   overflow: hidden;
   &::before {
@@ -54,10 +54,20 @@ h2{
   animation: fadeOut 0.5s ease-out forwards;
 }
 
-.arrow{
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the pixel value to control the height of the movement */
+  }
+}
+
+.arrow {
   width: 35px;
   z-index: 5;
   cursor: pointer;
+  animation: upAndDown 2s ease-in-out infinite; /* Apply the animation */
 }
 
 @media only screen and (min-resolution: 130dpi) and (max-resolution: 144dpi){ 
@@ -78,4 +88,9 @@ h2{
       width: 90%;
       
     }
+}
+@media (max-width: 480px){
+  .arrow{
+    width: 20px !important;
+  }
 }

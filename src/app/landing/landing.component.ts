@@ -3,15 +3,15 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ScrollHorizontalDirective } from '../scroll-horizontal.directive';
 import { SharedService } from '../shared.service';
-import { HomeSlide1Component } from '../home-slides';
-import { HomeSlide2Component } from '../home-slides';
-import { HomeSlide3Component } from '../home-slides';
-import { HomeSlide4Component } from '../home-slides';
-import { HomeSlide5Component } from '../home-slides';
-import { HomeSlide6Component } from '../home-slides';
-import { HomeSlide7Component } from '../home-slides';
-import { HomeSlide8Component } from '../home-slides';
-import { HomeSlide9Component } from '../home-slides';
+import { HomeSlide1Component } from '../home-slides/home-slide-1/home-slide-1.component';
+import { HomeSlide2Component } from '../home-slides/home-slide-2/home-slide-2.component';
+import { HomeSlide3Component } from '../home-slides/home-slide-3/home-slide-3.component';
+import { HomeSlide4Component } from '../home-slides/home-slide-4/home-slide-4.component';
+import { HomeSlide5Component } from '../home-slides/home-slide-5/home-slide-5.component';
+import { HomeSlide6Component } from '../home-slides/home-slide-6/home-slide-6.component';
+import { HomeSlide7Component } from '../home-slides/home-slide-7/home-slide-7.component';
+import { HomeSlide8Component } from '../home-slides/home-slide-8/home-slide-8.component';
+import { HomeSlide9Component } from '../home-slides/home-slide-9/home-slide-9.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 @Component({
@@ -47,6 +47,18 @@ export class LandingComponent implements OnInit {
     this.sharedService.scrollToSlideEvent.subscribe((index: number) => {
       this.goToSlide(index);
     });
+  }
+  scrollTo(direction: 'prev' | 'next'): void {
+    const carouselElement = this.carousel.nativeElement;
+    const slides = carouselElement.querySelectorAll('.slide');
+
+    if (direction === 'next' && this.activeSlideIndex < slides.length - 1) {
+      this.activeSlideIndex++;
+    } else if (direction === 'prev' && this.activeSlideIndex > 0) {
+      this.activeSlideIndex--;
+    }
+
+    this.goToSlide(this.activeSlideIndex);
   }
 
   onScroll(): void {

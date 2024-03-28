@@ -36,6 +36,27 @@
 .indicator.special-color-indicator {
   background-color: white; // Special color for slides 2 and 3
 }
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 2em;
+  color: #fff; /* Adjust color as needed */
+  z-index: 10;
+  user-select: none;
+}
+
+.left-arrow {
+  left: 30px;
+  top: 50%;
+  color: #434e50;
+}
+.right-arrow {
+  right: 30px;
+  top: 50%;
+  color: #434e50;
+}
 
 .carousel-indicators {
   text-align: center;
@@ -73,6 +94,9 @@
   }
 }
 @media (max-width: 780px) {
+  .nav-arrow {
+    display: none;
+  }
   .content {
     width: 90%;
     height: calc(100vh - 40vh);

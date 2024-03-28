@@ -29,7 +29,7 @@
   .carousel-indicators {
     text-align: center;
     position: relative;
-    bottom: 75px !important;
+    bottom: 90px !important;
     z-index: 10;
   }
   
@@ -109,6 +109,10 @@
     }
     .right-arrow, .left-arrow{
       display: none;
+    }
+    .arrow{
+      width: 20px !important;
+      right: 250%;
     }
   //   .right-arrow {
   //     right: 15px;
